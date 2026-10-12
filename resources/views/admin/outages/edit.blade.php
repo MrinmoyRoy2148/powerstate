@@ -1,0 +1,6 @@
+@extends('layouts.admin')
+@section('title', __('Edit outage'))
+@section('content')
+    <x-admin-page-header :title="__('Edit outage')" :description="__('Correct the outage details or update its current status.')" />
+    <form method="POST" action="{{ route('admin.outages.update', $outage) }}" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">@csrf @method('PUT') @include('admin.outages._form')<div class="mt-7 flex gap-3"><button class="rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white" type="submit">{{ __('Save changes') }}</button><a href="{{ route('admin.outages.show', $outage) }}" class="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold">{{ __('Cancel') }}</a></div></form>
+@endsection
