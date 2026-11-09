@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AnnouncementController as AdminAnnouncementController;
 use App\Http\Controllers\Admin\LoadSheddingScheduleController as AdminScheduleController;
 use App\Http\Controllers\Admin\OutageController as AdminOutageController;
@@ -40,13 +41,28 @@ Route::prefix('admin')->name('admin.')->group(function (): void {
     Route::middleware(['auth', 'admin'])->group(function (): void {
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/profile', [AdminProfileController::class, 'edit'])->name('profile.edit');
+        Route::put('/profile', [AdminProfileController::class, 'update'])->name('profile.update');
+        Route::put('/profile/password', [AdminProfileController::class, 'updatePassword'])->name('profile.password.update');
 
         Route::resource('zones', AdminZoneController::class)->except('show');
         Route::resource('reasons', AdminOutageReasonController::class)->except('show');
+        Route::patch('/reasons/{reason}/activation', [AdminOutageReasonController::class, 'updateActivation'])
+            ->name('reasons.activation.update');
         Route::resource('schedules', AdminScheduleController::class)->except('show');
+        Route::patch('/schedules/{schedule}/publish', [AdminScheduleController::class, 'publish'])
+            ->name('schedules.publish');
+        Route::patch('/schedules/{schedule}/cancel', [AdminScheduleController::class, 'cancel'])
+            ->name('schedules.cancel');
         Route::patch('/outages/{outage}/restore', [AdminOutageController::class, 'restore'])
             ->name('outages.restore');
-        Route::resource('outages', AdminOutageController::class);
+        Route::get('/outages/history', [AdminOutageController::class, 'history'])
+            ->name('outages.history');
+        Route::resource('outages', AdminOutageController::class)->except('destroy');
         Route::resource('announcements', AdminAnnouncementController::class)->except('show');
+        Route::patch('/announcements/{announcement}/publish', [AdminAnnouncementController::class, 'publish'])
+            ->name('announcements.publish');
+        Route::patch('/announcements/{announcement}/unpublish', [AdminAnnouncementController::class, 'unpublish'])
+            ->name('announcements.unpublish');
     });
 });

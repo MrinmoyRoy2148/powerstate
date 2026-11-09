@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -27,6 +28,21 @@ class Outage extends Model
             'expected_restoration_at' => 'datetime',
             'restored_at' => 'datetime',
         ];
+    }
+
+    protected function durationMinutes(): Attribute
+    {
+        return Attribute::get(function (): ?int {
+            if (
+                $this->started_at === null
+                || $this->restored_at === null
+                || $this->restored_at->lessThan($this->started_at)
+            ) {
+                return null;
+            }
+
+            return intdiv($this->restored_at->getTimestamp() - $this->started_at->getTimestamp(), 60);
+        });
     }
 
     /**

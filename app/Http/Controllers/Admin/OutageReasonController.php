@@ -56,6 +56,19 @@ class OutageReasonController extends Controller
         return redirect()->route('admin.reasons.index')->with('success', __('Outage reason updated successfully.'));
     }
 
+    public function updateActivation(Request $request, OutageReason $reason): RedirectResponse
+    {
+        $validated = $request->validate([
+            'is_active' => ['required', 'boolean'],
+        ]);
+
+        $reason->update(['is_active' => $validated['is_active']]);
+
+        return redirect()->route('admin.reasons.index')->with('success', __(
+            $reason->is_active ? 'Outage reason activated successfully.' : 'Outage reason deactivated successfully.'
+        ));
+    }
+
     public function destroy(OutageReason $reason): RedirectResponse
     {
         if ($reason->outages()->exists()) {

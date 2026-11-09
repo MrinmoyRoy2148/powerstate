@@ -40,16 +40,14 @@ class PublicZoneController extends Controller
                 ->orderBy('scheduled_date')
                 ->orderBy('start_time'),
             'announcements' => fn ($query) => $query->with('zone')
-                ->where('status', 'published')
-                ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->publiclyVisible()
                 ->latest('published_at'),
         ]);
 
         $announcements = Announcement::query()
             ->with('zone')
             ->whereNull('zone_id')
-            ->where('status', 'published')
-            ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+            ->publiclyVisible()
             ->latest('published_at')
             ->get();
 

@@ -14,8 +14,7 @@ class HomeController extends Controller
     {
         $announcements = Announcement::query()
             ->with('zone')
-            ->where('status', 'published')
-            ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+            ->publiclyVisible()
             ->where(fn ($query) => $query->whereNull('zone_id')->orWhereHas('zone', fn ($zoneQuery) => $zoneQuery->where('is_active', true)))
             ->latest('published_at')
             ->limit(5)

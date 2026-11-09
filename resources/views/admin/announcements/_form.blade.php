@@ -1,28 +1,34 @@
-<div class="grid gap-5 sm:grid-cols-2">
-    <div class="sm:col-span-2">
-        <label for="title" class="mb-1 block text-sm font-bold">{{ __('Title') }} <span class="text-rose-600">*</span></label>
-        <input id="title" name="title" value="{{ old('title', $announcement->title ?? '') }}" required maxlength="180" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm">
-        @error('title')<p class="mt-1 text-sm text-rose-700">{{ $message }}</p>@enderror
+<div class="row g-3">
+    <div class="col-12">
+        <label for="title" class="form-label">{{ __('Title') }} <span class="text-danger">*</span></label>
+        <input id="title" name="title" value="{{ old('title', $announcement->title ?? '') }}" required maxlength="180" class="form-control @error('title') is-invalid @enderror">
+        @error('title')<div class="invalid-feedback">{{ $message }}</div>@enderror
     </div>
-    <div>
-        <label for="zone_id" class="mb-1 block text-sm font-bold">{{ __('Audience') }}</label>
-        <select id="zone_id" name="zone_id" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm"><option value="">{{ __('All areas') }}</option>@foreach ($zones as $zone)<option value="{{ $zone->id }}" @selected((string) old('zone_id', $announcement->zone_id ?? '') === (string) $zone->id)>{{ $zone->name }}</option>@endforeach</select>
-        @error('zone_id')<p class="mt-1 text-sm text-rose-700">{{ $message }}</p>@enderror
+    <div class="col-md-6">
+        <label for="zone_id" class="form-label">{{ __('Audience') }}</label>
+        <select id="zone_id" name="zone_id" class="form-select @error('zone_id') is-invalid @enderror"><option value="">{{ __('All areas') }}</option>@foreach ($zones as $zone)<option value="{{ $zone->id }}" @selected((string) old('zone_id', $announcement->zone_id ?? '') === (string) $zone->id)>{{ $zone->name }}</option>@endforeach</select>
+        @error('zone_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
     </div>
-    <div>
-        <label for="status" class="mb-1 block text-sm font-bold">{{ __('Status') }} <span class="text-rose-600">*</span></label>
-        <select id="status" name="status" required class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm"><option value="draft" @selected(old('status', $announcement->status ?? 'draft') === 'draft')>{{ __('Draft (not public)') }}</option><option value="published" @selected(old('status', $announcement->status ?? '') === 'published')>{{ __('status.published') }}</option></select>
-        @error('status')<p class="mt-1 text-sm text-rose-700">{{ $message }}</p>@enderror
+    <div class="col-md-6">
+        <label for="status" class="form-label">{{ __('labels.status') }} <span class="text-danger">*</span></label>
+        <select id="status" name="status" required class="form-select @error('status') is-invalid @enderror"><option value="draft" @selected(old('status', $announcement->status ?? 'draft') === 'draft')>{{ __('Draft (not public)') }}</option><option value="published" @selected(old('status', $announcement->status ?? '') === 'published')>{{ __('status.published') }}</option></select>
+        @error('status')<div class="invalid-feedback">{{ $message }}</div>@enderror
     </div>
-    <div>
-        <label for="published_at" class="mb-1 block text-sm font-bold">{{ __('Publish at') }}</label>
-        <input id="published_at" name="published_at" type="datetime-local" value="{{ old('published_at', isset($announcement) && $announcement->published_at ? $announcement->published_at->format('Y-m-d\TH:i') : '') }}" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm">
-        <p class="mt-1 text-xs text-slate-500">{{ __('Leave blank to publish immediately when status is Published.') }}</p>
-        @error('published_at')<p class="mt-1 text-sm text-rose-700">{{ $message }}</p>@enderror
+    <div class="col-md-6">
+        <label for="published_at" class="form-label">{{ __('Publish at') }}</label>
+        <input id="published_at" name="published_at" type="datetime-local" value="{{ old('published_at', isset($announcement) && $announcement->published_at ? $announcement->published_at->format('Y-m-d\TH:i') : '') }}" class="form-control @error('published_at') is-invalid @enderror">
+        <div class="form-text">{{ __('Leave blank to publish immediately when status is Published.') }}</div>
+        @error('published_at')<div class="invalid-feedback">{{ $message }}</div>@enderror
     </div>
-    <div class="sm:col-span-2">
-        <label for="body" class="mb-1 block text-sm font-bold">{{ __('Message') }} <span class="text-rose-600">*</span></label>
-        <textarea id="body" name="body" rows="8" required class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm">{{ old('body', $announcement->body ?? '') }}</textarea>
-        @error('body')<p class="mt-1 text-sm text-rose-700">{{ $message }}</p>@enderror
+    <div class="col-md-6">
+        <label for="expires_at" class="form-label">{{ __('Expire at') }}</label>
+        <input id="expires_at" name="expires_at" type="datetime-local" value="{{ old('expires_at', isset($announcement) && $announcement->expires_at ? $announcement->expires_at->format('Y-m-d\TH:i') : '') }}" class="form-control @error('expires_at') is-invalid @enderror">
+        <div class="form-text">{{ __('Leave blank for no expiry.') }}</div>
+        @error('expires_at')<div class="invalid-feedback">{{ $message }}</div>@enderror
+    </div>
+    <div class="col-12">
+        <label for="body" class="form-label">{{ __('Message') }} <span class="text-danger">*</span></label>
+        <textarea id="body" name="body" rows="8" required class="form-control @error('body') is-invalid @enderror">{{ old('body', $announcement->body ?? '') }}</textarea>
+        @error('body')<div class="invalid-feedback">{{ $message }}</div>@enderror
     </div>
 </div>

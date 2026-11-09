@@ -2,20 +2,25 @@
 @section('title', __('Announcements'))
 @section('content')
     <x-admin-page-header :title="__('Announcements')" :description="__('Draft and publish service notices for a specific area or everyone.')" :action="route('admin.announcements.create')" :action-label="__('Add announcement')" />
-    <form method="GET" action="{{ route('admin.announcements.index') }}" class="mb-5 flex flex-wrap items-end gap-3 rounded-2xl border border-slate-200 bg-white p-4">
-        <div><label for="status" class="mb-1 block text-xs font-bold text-slate-600">{{ __('Status') }}</label><select id="status" name="status" class="rounded-xl border border-slate-300 px-3 py-2.5 text-sm"><option value="">{{ __('All statuses') }}</option><option value="draft" @selected(request('status') === 'draft')>{{ __('status.draft') }}</option><option value="published" @selected(request('status') === 'published')>{{ __('status.published') }}</option></select></div>
-        <button class="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-bold text-white" type="submit">{{ __('Filter') }}</button>
-        @if (request()->has('status'))<a href="{{ route('admin.announcements.index') }}" class="px-2 py-2.5 text-sm font-semibold text-slate-600">{{ __('Clear') }}</a>@endif
+    <form method="GET" action="{{ route('admin.announcements.index') }}" class="card card-body mb-3">
+        <div class="row g-3 align-items-end">
+            <div class="col-sm-6 col-lg-3"><label for="search" class="form-label">{{ __('Search') }}</label><input id="search" name="search" type="search" value="{{ request('search') }}" class="form-control" placeholder="{{ __('Title or message') }}"></div>
+            <div class="col-sm-6 col-lg-3"><label for="zone_id" class="form-label">{{ __('Audience') }}</label><select id="zone_id" name="zone_id" class="form-select"><option value="">{{ __('All areas') }}</option>@foreach ($zones as $zone)<option value="{{ $zone->id }}" @selected((string) request('zone_id') === (string) $zone->id)>{{ $zone->name }}</option>@endforeach</select></div>
+            <div class="col-sm-6 col-lg-3"><label for="status" class="form-label">{{ __('labels.status') }}</label><select id="status" name="status" class="form-select"><option value="">{{ __('All statuses') }}</option><option value="draft" @selected(request('status') === 'draft')>{{ __('status.draft') }}</option><option value="published" @selected(request('status') === 'published')>{{ __('status.published') }}</option><option value="expired" @selected(request('status') === 'expired')>{{ __('Expired') }}</option></select></div>
+            <div class="col-sm-6 col-lg-3 d-flex gap-2"><button class="btn btn-primary" type="submit">{{ __('Filter') }}</button>
+                @if (request()->hasAny(['status', 'zone_id', 'search']))<a href="{{ route('admin.announcements.index') }}" class="btn btn-outline-secondary">{{ __('Clear') }}</a>@endif
+            </div>
+        </div>
     </form>
-    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div class="overflow-x-auto">
-            <table class="w-full min-w-[800px] text-left text-sm">
-                <thead class="bg-slate-50 text-xs text-slate-500"><tr><th class="px-5 py-3">{{ __('Announcement') }}</th><th class="px-5 py-3">{{ __('Audience') }}</th><th class="px-5 py-3">{{ __('Publication') }}</th><th class="px-5 py-3">{{ __('Author') }}</th><th class="px-5 py-3">{{ __('Actions') }}</th></tr></thead>
-                <tbody class="divide-y divide-slate-100">
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light"><tr><th>{{ __('Announcement') }}</th><th>{{ __('Audience') }}</th><th>{{ __('Publication') }}</th><th>{{ __('Author') }}</th><th>{{ __('Actions') }}</th></tr></thead>
+                <tbody>
                     @forelse ($announcements as $announcement)
-                        <tr><td class="px-5 py-4"><p class="font-bold">{{ $announcement->title }}</p><p class="mt-1 max-w-md truncate text-slate-500">{{ $announcement->body }}</p></td><td class="px-5 py-4">{{ $announcement->zone?->name ?? __('All areas') }}</td><td class="px-5 py-4"><x-status-badge :value="$announcement->status" /><p class="mt-1 text-xs text-slate-500">{{ $announcement->published_at?->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') ?? __('Not scheduled') }}</p></td><td class="px-5 py-4">{{ $announcement->creator?->name ?? '—' }}</td><td class="px-5 py-4"><div class="flex gap-3"><a class="font-bold text-emerald-700" href="{{ route('admin.announcements.edit', $announcement) }}">{{ __('Edit') }}</a><form method="POST" action="{{ route('admin.announcements.destroy', $announcement) }}" onsubmit="return confirm(@js(__('Delete this announcement?')))">@csrf @method('DELETE')<button class="font-bold text-rose-700" type="submit">{{ __('Delete') }}</button></form></div></td></tr>
+                        <tr><td><strong>{{ $announcement->title }}</strong><div class="small text-secondary text-truncate" style="max-width: 24rem">{{ $announcement->body }}</div></td><td>{{ $announcement->zone?->name ?? __('All areas') }}</td><td>@if ($announcement->status === 'published' && $announcement->expires_at?->isPast())<span class="badge text-bg-secondary">{{ __('Expired') }}</span>@else<x-status-badge :value="$announcement->status" />@endif<div class="small text-secondary">{{ __('Publish at') }}: {{ $announcement->published_at?->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') ?? __('Not scheduled') }}</div><div class="small text-secondary">{{ __('Expire at') }}: {{ $announcement->expires_at?->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') ?? '—' }}</div></td><td>{{ $announcement->creator?->name ?? '—' }}</td><td><div class="d-flex flex-wrap gap-2"><a class="btn btn-sm btn-outline-primary" href="{{ route('admin.announcements.edit', $announcement) }}">{{ __('Edit') }}</a>@if ($announcement->status === 'published')<form method="POST" action="{{ route('admin.announcements.unpublish', $announcement) }}">@csrf @method('PATCH')<button class="btn btn-sm btn-outline-secondary" type="submit">{{ __('Unpublish') }}</button></form>@else<form method="POST" action="{{ route('admin.announcements.publish', $announcement) }}">@csrf @method('PATCH')<button class="btn btn-sm btn-success" type="submit">{{ __('Publish') }}</button></form>@endif<form method="POST" action="{{ route('admin.announcements.destroy', $announcement) }}" onsubmit="return confirm(@js(__('Delete this announcement?')))">@csrf @method('DELETE')<button class="btn btn-sm btn-outline-danger" type="submit">{{ __('Delete') }}</button></form></div></td></tr>
                     @empty
-                        <tr><td colspan="5" class="px-5 py-10 text-center text-slate-500">{{ __('No announcements match this filter.') }}</td></tr>
+                        <tr><td colspan="5" class="text-center text-secondary py-5">{{ __('No announcements match this filter.') }}</td></tr>
                     @endforelse
                 </tbody>
             </table>

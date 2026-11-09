@@ -19,17 +19,59 @@ class OutageController extends Controller
         $validated = $request->validate([
             'status' => ['nullable', Rule::in(['active', 'restored', 'cancelled'])],
             'zone' => ['nullable', 'integer', 'exists:zones,id'],
+            'date' => ['nullable', 'date_format:Y-m-d'],
+            'search' => ['nullable', 'string', 'max:120'],
         ]);
 
         $outages = Outage::query()
             ->with(['zone', 'reason', 'reporter'])
+            ->when($validated['search'] ?? null, function ($query, string $search): void {
+                $query->where(function ($query) use ($search): void {
+                    $query->where('title', 'like', '%'.$search.'%')
+                        ->orWhereHas('reason', fn ($query) => $query->where('name', 'like', '%'.$search.'%'));
+                });
+            })
             ->when($validated['status'] ?? null, fn ($query, string $status) => $query->where('status', $status))
             ->when($validated['zone'] ?? null, fn ($query, int $zoneId) => $query->where('zone_id', $zoneId))
+            ->when($validated['date'] ?? null, fn ($query, string $date) => $query->whereDate('started_at', $date))
             ->latest('started_at')
             ->paginate(20)
             ->withQueryString();
 
         return view('admin.outages.index', [
+            'outages' => $outages,
+            'zones' => Zone::query()->orderBy('name')->get(),
+        ]);
+    }
+
+    public function history(Request $request): View
+    {
+        $validated = $request->validate([
+            'zone' => ['nullable', 'integer', 'exists:zones,id'],
+            'start_date' => ['nullable', 'date_format:Y-m-d'],
+            'end_date' => [
+                'nullable',
+                'date_format:Y-m-d',
+                Rule::when($request->filled('start_date'), ['after_or_equal:start_date']),
+            ],
+            'outage_type' => ['nullable', Rule::in(['planned', 'unexpected'])],
+        ]);
+
+        $outages = Outage::query()
+            ->with(['zone', 'reason'])
+            ->whereIn('status', ['restored', 'cancelled'])
+            ->when($validated['zone'] ?? null, fn ($query, int $zoneId) => $query->where('zone_id', $zoneId))
+            ->when($validated['start_date'] ?? null, fn ($query, string $date) => $query->whereDate('started_at', '>=', $date))
+            ->when($validated['end_date'] ?? null, fn ($query, string $date) => $query->whereDate('started_at', '<=', $date))
+            ->when(
+                $validated['outage_type'] ?? null,
+                fn ($query, string $type) => $query->where('outage_type', $type)
+            )
+            ->latest('started_at')
+            ->paginate(20)
+            ->withQueryString();
+
+        return view('admin.outages.history', [
             'outages' => $outages,
             'zones' => Zone::query()->orderBy('name')->get(),
         ]);
@@ -74,13 +116,6 @@ class OutageController extends Controller
         $outage->update($validated);
 
         return redirect()->route('admin.outages.show', $outage)->with('success', __('Outage updated successfully.'));
-    }
-
-    public function destroy(Outage $outage): RedirectResponse
-    {
-        $outage->delete();
-
-        return redirect()->route('admin.outages.index')->with('success', __('Outage deleted successfully.'));
     }
 
     public function restore(Outage $outage): RedirectResponse

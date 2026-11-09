@@ -2,14 +2,15 @@
 @section('title', __('Outage reasons'))
 @section('content')
     <x-admin-page-header :title="__('Outage reasons')" :description="__('Maintain the selectable reasons used when recording an outage.')" :action="route('admin.reasons.create')" :action-label="__('Add reason')" />
-    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <table class="w-full text-left text-sm">
-            <thead class="bg-slate-50 text-xs text-slate-500"><tr><th class="px-5 py-3">{{ __('Reason') }}</th><th class="px-5 py-3">{{ __('Outages') }}</th><th class="px-5 py-3">{{ __('Status') }}</th><th class="px-5 py-3">{{ __('Actions') }}</th></tr></thead>
-            <tbody class="divide-y divide-slate-100">
+    <div class="card">
+        <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light"><tr><th>{{ __('Reason') }}</th><th>{{ __('Outages') }}</th><th>{{ __('labels.status') }}</th><th>{{ __('Actions') }}</th></tr></thead>
+            <tbody>
                 @forelse ($reasons as $reason)
-                    <tr><td class="px-5 py-4"><p class="font-bold">{{ $reason->name }}</p><p class="mt-1 text-slate-500">{{ $reason->description ?: '—' }}</p></td><td class="px-5 py-4">{{ $reason->outages_count }}</td><td class="px-5 py-4"><x-status-badge :value="$reason->is_active ? 'active' : 'inactive'" /></td><td class="px-5 py-4"><div class="flex gap-3"><a class="font-bold text-emerald-700" href="{{ route('admin.reasons.edit', $reason) }}">{{ __('Edit') }}</a><form method="POST" action="{{ route('admin.reasons.destroy', $reason) }}" onsubmit="return confirm(@js(__('Delete this reason?')))">@csrf @method('DELETE')<button class="font-bold text-rose-700" type="submit">{{ __('Delete') }}</button></form></div></td></tr>
+                    <tr><td><strong>{{ $reason->name }}</strong><div class="small text-secondary">{{ $reason->description ?: '—' }}</div></td><td>{{ $reason->outages_count }}</td><td><x-status-badge :value="$reason->is_active ? 'active' : 'inactive'" /></td><td><div class="d-flex flex-wrap gap-2"><a class="btn btn-sm btn-outline-primary" href="{{ route('admin.reasons.edit', $reason) }}">{{ __('Edit') }}</a><form method="POST" action="{{ route('admin.reasons.activation.update', $reason) }}">@csrf @method('PATCH')<input type="hidden" name="is_active" value="{{ $reason->is_active ? 0 : 1 }}"><button class="btn btn-sm {{ $reason->is_active ? 'btn-outline-secondary' : 'btn-success' }}" type="submit">{{ $reason->is_active ? __('Deactivate') : __('Activate') }}</button></form><form method="POST" action="{{ route('admin.reasons.destroy', $reason) }}" onsubmit="return confirm(@js(__('Delete this reason?')))">@csrf @method('DELETE')<button class="btn btn-sm btn-outline-danger" type="submit">{{ __('Delete') }}</button></form></div></td></tr>
                 @empty
-                    <tr><td colspan="4" class="px-5 py-10 text-center text-slate-500">{{ __('No outage reasons have been created.') }}</td></tr>
+                    <tr><td colspan="4" class="text-center text-secondary py-5">{{ __('No outage reasons have been created.') }}</td></tr>
                 @endforelse
             </tbody>
         </table>
