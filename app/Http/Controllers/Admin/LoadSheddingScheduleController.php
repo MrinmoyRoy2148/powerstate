@@ -12,13 +12,42 @@ use Illuminate\View\View;
 
 class LoadSheddingScheduleController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
+        $validated = $request->validate([
+            'period' => ['nullable', Rule::in(['upcoming', 'past', 'all'])],
+            'search' => ['nullable', 'string', 'max:120'],
+            'zone_id' => ['nullable', 'integer', 'exists:zones,id'],
+            'scheduled_date' => ['nullable', 'date_format:Y-m-d'],
+            'status' => ['nullable', Rule::in(['draft', 'published', 'cancelled'])],
+        ]);
+
+        $period = $validated['period'] ?? 'upcoming';
+        $schedules = LoadSheddingSchedule::query()
+            ->with(['zone', 'creator'])
+            ->when(
+                $validated['search'] ?? null,
+                fn ($query, string $search) => $query->where('title', 'like', '%'.$search.'%')
+            )
+            ->when($period === 'upcoming', fn ($query) => $query->whereDate('scheduled_date', '>=', today()))
+            ->when($period === 'past', fn ($query) => $query->whereDate('scheduled_date', '<', today()))
+            ->when($validated['zone_id'] ?? null, fn ($query, int $zoneId) => $query->where('zone_id', $zoneId))
+            ->when(
+                $validated['scheduled_date'] ?? null,
+                fn ($query, string $date) => $query->whereDate('scheduled_date', $date)
+            )
+            ->when($validated['status'] ?? null, fn ($query, string $status) => $query->where('status', $status));
+
+        if ($period === 'upcoming') {
+            $schedules->orderBy('scheduled_date')->orderBy('start_time');
+        } else {
+            $schedules->orderByDesc('scheduled_date')->orderByDesc('start_time');
+        }
+
         return view('admin.schedules.index', [
-            'schedules' => LoadSheddingSchedule::query()
-                ->with(['zone', 'creator'])
-                ->latest('scheduled_date')
-                ->paginate(20),
+            'schedules' => $schedules->paginate(20)->withQueryString(),
+            'zones' => Zone::query()->orderBy('name')->get(),
+            'period' => $period,
         ]);
     }
 
@@ -52,6 +81,20 @@ class LoadSheddingScheduleController extends Controller
         return redirect()->route('admin.schedules.index')->with('success', __('Schedule updated successfully.'));
     }
 
+    public function publish(LoadSheddingSchedule $schedule): RedirectResponse
+    {
+        $schedule->update(['status' => 'published']);
+
+        return redirect()->route('admin.schedules.index')->with('success', __('Schedule published successfully.'));
+    }
+
+    public function cancel(LoadSheddingSchedule $schedule): RedirectResponse
+    {
+        $schedule->update(['status' => 'cancelled']);
+
+        return redirect()->route('admin.schedules.index')->with('success', __('Schedule cancelled successfully.'));
+    }
+
     public function destroy(LoadSheddingSchedule $schedule): RedirectResponse
     {
         $schedule->delete();
@@ -67,7 +110,7 @@ class LoadSheddingScheduleController extends Controller
         return $request->validate([
             'zone_id' => ['required', 'integer', Rule::exists('zones', 'id')->where('is_active', true)],
             'title' => ['required', 'string', 'max:180'],
-            'scheduled_date' => ['required', 'date'],
+            'scheduled_date' => ['required', 'date_format:Y-m-d'],
             'start_time' => ['required', 'date_format:H:i'],
             'end_time' => ['required', 'date_format:H:i', 'after:start_time'],
             'notes' => ['nullable', 'string'],

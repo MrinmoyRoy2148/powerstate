@@ -11,8 +11,7 @@ class PublicAnnouncementController extends Controller
     {
         $announcements = Announcement::query()
             ->with('zone')
-            ->where('status', 'published')
-            ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+            ->publiclyVisible()
             ->where(fn ($query) => $query->whereNull('zone_id')->orWhereHas('zone', fn ($zoneQuery) => $zoneQuery->where('is_active', true)))
             ->latest('published_at')
             ->paginate(15);
@@ -23,8 +22,7 @@ class PublicAnnouncementController extends Controller
     public function show(Announcement $announcement): View
     {
         abort_unless(
-            $announcement->status === 'published'
-                && ($announcement->published_at === null || $announcement->published_at->lte(now())),
+            Announcement::query()->publiclyVisible()->whereKey($announcement->getKey())->exists(),
             404
         );
         abort_if($announcement->zone_id !== null && ! $announcement->zone()->where('is_active', true)->exists(), 404);

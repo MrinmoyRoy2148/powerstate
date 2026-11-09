@@ -20,8 +20,7 @@ class AdminDashboardController extends Controller
                 ->count(),
             'activeOutageCount' => Outage::query()->where('status', 'active')->count(),
             'publishedAnnouncementCount' => Announcement::query()
-                ->where('status', 'published')
-                ->where(fn ($query) => $query->whereNull('published_at')->orWhere('published_at', '<=', now()))
+                ->publiclyVisible()
                 ->count(),
             'recentOutages' => Outage::query()->with('zone')->latest('started_at')->limit(5)->get(),
             'upcomingSchedules' => LoadSheddingSchedule::query()
@@ -33,7 +32,7 @@ class AdminDashboardController extends Controller
                 ->limit(5)
                 ->get(),
             'latestAnnouncements' => Announcement::query()
-                ->where('status', 'published')
+                ->publiclyVisible()
                 ->latest('published_at')
                 ->limit(5)
                 ->get(),
