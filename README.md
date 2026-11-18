@@ -8,6 +8,7 @@ PowerStat BD is a Bangladesh-focused web application for sharing area-based elec
 
 - Bangla-first public interface with an English language switch.
 - Public pages for service areas, active outages, outage history, schedules, and announcements.
+- Self-service user registration, login, logout, and password reset.
 - Protected administration area for managing service areas, outage reasons, schedules, outages, and announcements.
 - Admin access controls, active/inactive accounts, and rate-limited login attempts.
 - Dhaka timezone defaults for local date and time display.
@@ -86,25 +87,21 @@ Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in a browser.
 
 For frontend development with Vite hot reload, run `npm run dev` in a second terminal while `php artisan serve` is running.
 
+## User accounts
+
+Visitors can create a regular user account at `/register` and sign in at `/login`. New registrations always receive the regular `user` role; the registration form cannot grant administrator access.
+
+The password reset form is available from the user login page. For local development, if `MAIL_MAILER=log`, reset emails are written to `storage/logs/laravel.log` instead of being delivered to an inbox. Configure a working mail transport in `.env` to deliver reset links by email.
+
 ## Administrator account
 
-The project does not create a default administrator account. After running migrations, create the first administrator yourself so no shared or predictable password is used:
+The project does not create an administrator with a default password. To create or update the initial administrator, set `ADMIN_NAME`, `ADMIN_EMAIL`, and a strong `ADMIN_PASSWORD` of at least 12 characters in your local `.env`, then run:
 
 ```powershell
-php artisan tinker
+php artisan db:seed --class=AdminUserSeeder
 ```
 
-At the Tinker prompt, create an account with your own name, email, and a strong password:
-
-```php
-App\Models\User::create([
-    'name' => 'Your Name',
-    'email' => 'you@example.com',
-    'password' => 'replace-this-with-a-strong-password',
-]);
-```
-
-The database migration defaults new accounts to the administrator role. Sign in at [http://127.0.0.1:8000/admin/login](http://127.0.0.1:8000/admin/login), then type `exit` to leave Tinker. Replace the example email and password with your own values; never use the example password.
+Sign in at [http://127.0.0.1:8000/admin/login](http://127.0.0.1:8000/admin/login) with the configured administrator email and password. Do not commit `.env` or share its contents.
 
 ## Tests
 

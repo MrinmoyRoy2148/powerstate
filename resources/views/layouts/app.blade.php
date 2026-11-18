@@ -27,6 +27,22 @@
                     <a class="{{ request()->routeIs('outages.history') ? 'text-emerald-700' : 'hover:text-emerald-700' }}" href="{{ route('outages.history') }}">{{ __('History') }}</a>
                     <a class="{{ request()->routeIs('announcements.*') ? 'text-emerald-700' : 'hover:text-emerald-700' }}" href="{{ route('announcements.index') }}">{{ __('Notices') }}</a>
                 </nav>
+                <div class="flex flex-wrap items-center gap-3 text-sm font-semibold">
+                    @guest
+                        <a class="text-emerald-700 hover:text-emerald-800" href="{{ route('login') }}">{{ __('Log in') }}</a>
+                        <a class="rounded-xl bg-emerald-600 px-3 py-2 text-white hover:bg-emerald-700" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @else
+                        @if (auth()->user()->isAdmin())
+                            <a class="text-emerald-700 hover:text-emerald-800" href="{{ route('admin.dashboard') }}">{{ __('Admin panel') }}</a>
+                        @else
+                            <span class="text-slate-600">{{ auth()->user()->name }}</span>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button class="text-emerald-700 hover:text-emerald-800" type="submit">{{ __('Sign out') }}</button>
+                            </form>
+                        @endif
+                    @endguest
+                </div>
                 <form method="POST" action="{{ route('language.update') }}">
                     @csrf
                     <input type="hidden" name="locale" value="{{ app()->getLocale() === 'bn' ? 'en' : 'bn' }}">

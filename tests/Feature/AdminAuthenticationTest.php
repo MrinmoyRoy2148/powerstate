@@ -53,6 +53,18 @@ class AdminAuthenticationTest extends TestCase
             ->assertForbidden();
     }
 
+    public function test_regular_user_visiting_admin_login_is_not_logged_out(): void
+    {
+        $user = User::factory()->create();
+        $user->forceFill(['role' => 'user'])->save();
+
+        $this->actingAs($user)
+            ->get(route('admin.login'))
+            ->assertRedirectToRoute('home');
+
+        $this->assertAuthenticatedAs($user);
+    }
+
     public function test_inactive_admin_cannot_sign_in_or_reach_dashboard(): void
     {
         $admin = User::factory()->create([
