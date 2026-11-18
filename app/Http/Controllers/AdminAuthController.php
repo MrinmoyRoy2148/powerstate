@@ -19,7 +19,7 @@ class AdminAuthController extends Controller
                 return redirect()->route('admin.dashboard');
             }
 
-            Auth::logout();
+            return redirect()->route('home');
         }
 
         return view('auth.admin-login');
