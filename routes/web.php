@@ -10,10 +10,12 @@ use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\PublicAnnouncementController;
 use App\Http\Controllers\PublicOutageController;
 use App\Http\Controllers\PublicScheduleController;
 use App\Http\Controllers\PublicZoneController;
+use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -31,6 +33,32 @@ Route::get('/announcements', [PublicAnnouncementController::class, 'index'])->na
 Route::get('/announcements/{announcement}', [PublicAnnouncementController::class, 'show'])
     ->whereNumber('announcement')
     ->name('announcements.show');
+
+Route::middleware('guest')->group(function (): void {
+    Route::get('/register', [UserAuthController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [UserAuthController::class, 'register'])
+        ->middleware('throttle:user-registration')
+        ->name('register.store');
+    Route::get('/login', [UserAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [UserAuthController::class, 'login'])
+        ->middleware('throttle:user-login')
+        ->name('login.store');
+
+    Route::get('/forgot-password', [PasswordResetController::class, 'showLinkRequestForm'])
+        ->name('password.request');
+    Route::post('/forgot-password', [PasswordResetController::class, 'sendResetLink'])
+        ->middleware('throttle:user-password-reset')
+        ->name('password.email');
+    Route::get('/reset-password/{token}', [PasswordResetController::class, 'showResetForm'])
+        ->name('password.reset');
+    Route::post('/reset-password', [PasswordResetController::class, 'reset'])
+        ->middleware('throttle:user-password-reset')
+        ->name('password.update');
+});
+
+Route::post('/logout', [UserAuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
 
 Route::prefix('admin')->name('admin.')->group(function (): void {
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
