@@ -1,0 +1,610 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3760" height="4980" viewBox="0 0 3760 4980" fill="none">
+  <defs>
+    <linearGradient id="admin-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081B35"/><stop offset="1" stop-color="#075044"/></linearGradient>
+    <filter id="admin-shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#21364A" flood-opacity=".10"/></filter>
+    <style>
+      .bn{font-family:"Noto Sans Bengali","Hind Siliguri",sans-serif}
+      .en{font-family:Inter,Arial,sans-serif}
+    </style>
+    <g id="admin-shell">
+      <rect width="1200" height="760" rx="20" fill="#F4F7FA"/>
+      <path d="M20 0H218V760H20Q0 760 0 740V20Q0 0 20 0Z" fill="#0B1C2E"/>
+      <rect x="21" y="0" width="197" height="760" fill="#0B1C2E"/>
+      <rect x="22" y="0" width="1178" height="68" rx="18" fill="#FFFFFF"/>
+      <path d="M220 48H1200V68H220V48Z" fill="#FFFFFF"/>
+      <rect x="22" y="0" width="198" height="68" fill="#0B1C2E"/>
+      <rect x="37" y="14" width="39" height="39" rx="12" fill="#079B6A"/>
+      <text x="56" y="41" class="en" fill="#FFFFFF" font-size="18" font-weight="800" text-anchor="middle">P</text>
+      <text x="86" y="32" class="en" fill="#FFFFFF" font-size="13" font-weight="800">PowerStat <tspan fill="#44D7A5">BD</tspan></text>
+      <text x="86" y="47" class="en" fill="#96A9BB" font-size="9">ADMIN CONSOLE</text>
+      <text x="35" y="96" class="en" fill="#72859A" font-size="9" font-weight="700" letter-spacing="1.2">WORKSPACE</text>
+      <rect x="28" y="109" width="181" height="39" rx="10" fill="#153A36"/>
+      <rect x="28" y="109" width="3" height="39" rx="2" fill="#15BB84"/>
+      <text x="48" y="134" class="bn" fill="#FFFFFF" font-size="11" font-weight="700">ড্যাশবোর্ড</text>
+      <text x="48" y="183" class="bn" fill="#AEBCCC" font-size="11">সেবার এলাকা</text>
+      <text x="48" y="224" class="bn" fill="#AEBCCC" font-size="11">বিভ্রাটের কারণ</text>
+      <text x="48" y="265" class="bn" fill="#AEBCCC" font-size="11">লোডশেডিং সময়সূচি</text>
+      <text x="48" y="306" class="bn" fill="#AEBCCC" font-size="11">বিভ্রাট রিপোর্ট</text>
+      <text x="48" y="347" class="bn" fill="#AEBCCC" font-size="11">ঘোষণা ও নোটিশ</text>
+      <path d="M34 375H202" stroke="#293B4D"/>
+      <text x="48" y="407" class="bn" fill="#AEBCCC" font-size="10">পাবলিক সাইট দেখুন ↗</text>
+      <circle cx="45" cy="718" r="15" fill="#19433D"/>
+      <text x="45" y="722" class="en" fill="#A7F2D7" font-size="9" font-weight="700" text-anchor="middle">AR</text>
+      <text x="68" y="715" class="bn" fill="#FFFFFF" font-size="9" font-weight="700">অ্যাডমিন</text>
+      <text x="68" y="730" class="en" fill="#91A2B2" font-size="8">admin@example.com</text>
+      <text x="245" y="27" class="bn" fill="#667A8D" font-size="9">পাওয়ারস্টেট  /  প্রশাসন</text>
+      <text x="245" y="47" class="bn" fill="#172C40" font-size="13" font-weight="700">বাংলাদেশ · স্থানীয় সময় (ঢাকা)</text>
+      <rect x="1008" y="16" width="66" height="35" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+      <text x="1041" y="38" class="en" fill="#506276" font-size="9" font-weight="700" text-anchor="middle">English</text>
+      <circle cx="1104" cy="33" r="16" fill="#E8F7F1"/>
+      <text x="1104" y="37" class="en" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">AR</text>
+      <text x="1127" y="31" class="bn" fill="#33485D" font-size="9" font-weight="700">অ্যাডমিন</text>
+      <text x="1127" y="44" class="bn" fill="#8492A1" font-size="8">সাইন আউট</text>
+    </g>
+    <g id="form-field">
+      <rect width="360" height="58" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    </g>
+    <g id="primary-button">
+      <rect width="150" height="38" rx="10" fill="#079B6A"/>
+    </g>
+    <g id="table-head">
+      <rect width="900" height="39" rx="9" fill="#F3F6F9"/>
+    </g>
+  </defs>
+  <rect width="3760" height="4980" fill="#E9EEF4"/>
+  <text x="40" y="35" class="en" fill="#526A7F" font-size="12" font-weight="800" letter-spacing="2">POWERSTAT BD  /  ADMIN PRODUCT SCREENS  /  BANGLA-FIRST</text>
+  <text x="40" y="56" class="bn" fill="#8293A3" font-size="11">অ্যাডমিন লগইন, ড্যাশবোর্ড, তালিকা, বিস্তারিত এবং প্রতিটি ব্যবস্থাপনা ফর্ম</text>
+
+  <g id="Admin-login" transform="translate(40 82)">
+    <rect width="1200" height="760" rx="22" fill="#081426" filter="url(#admin-shadow)"/>
+    <circle cx="205" cy="136" r="180" fill="#0B6752" fill-opacity=".12"/>
+    <circle cx="1040" cy="625" r="210" fill="#0B6752" fill-opacity=".10"/>
+    <rect x="403" y="113" width="394" height="500" rx="26" fill="#FFFFFF"/>
+    <rect x="438" y="151" width="43" height="43" rx="14" fill="#079B6A"/>
+    <text x="460" y="180" class="en" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">P</text>
+    <text x="494" y="173" class="en" fill="#14283C" font-size="16" font-weight="800">PowerStat <tspan fill="#079B6A">BD</tspan></text>
+    <text x="438" y="235" class="bn" fill="#07825D" font-size="10" font-weight="700">প্রশাসনিক প্রবেশ</text>
+    <text x="438" y="274" class="bn" fill="#14283C" font-size="27" font-weight="800">স্বাগতম</text>
+    <text x="438" y="300" class="bn" fill="#718196" font-size="11">অনুমোদিত অ্যাডমিন অ্যাকাউন্ট দিয়ে প্রবেশ করুন।</text>
+    <text x="438" y="342" class="bn" fill="#33485D" font-size="10" font-weight="700">ইমেইল ঠিকানা</text>
+    <rect x="438" y="352" width="324" height="42" rx="11" fill="#FFFFFF" stroke="#C9D5E0"/>
+    <text x="453" y="378" class="en" fill="#9AA7B4" font-size="11">admin@example.com</text>
+    <text x="438" y="423" class="bn" fill="#33485D" font-size="10" font-weight="700">পাসওয়ার্ড</text>
+    <rect x="438" y="433" width="324" height="42" rx="11" fill="#FFFFFF" stroke="#C9D5E0"/>
+    <text x="453" y="459" class="en" fill="#9AA7B4" font-size="11">••••••••••••</text>
+    <rect x="438" y="497" width="324" height="46" rx="12" fill="#079B6A"/>
+    <text x="600" y="526" class="bn" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">নিরাপদে সাইন ইন করুন</text>
+    <rect x="438" y="559" width="324" height="31" rx="9" fill="#FFF2F2"/>
+    <text x="600" y="579" class="bn" fill="#B94747" font-size="9" text-anchor="middle">ভুল ইমেইল বা পাসওয়ার্ড · ত্রুটি অবস্থার উদাহরণ</text>
+    <text x="600" y="651" class="bn" fill="#C5D3DF" font-size="10" text-anchor="middle">← পাবলিক ওয়েবসাইটে ফিরুন</text>
+  </g>
+
+  <g id="Admin-dashboard" transform="translate(1280 82)">
+    <use href="#admin-shell"/>
+    <rect x="28" y="109" width="181" height="39" rx="10" fill="#153A36"/><rect x="28" y="109" width="3" height="39" rx="2" fill="#15BB84"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="22" font-weight="800">ড্যাশবোর্ড</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">সাম্প্রতিক বিদ্যুৎ তথ্যের এক নজরের সারাংশ</text>
+    <rect x="1002" y="91" width="166" height="34" rx="10" fill="#E8F7F1"/>
+    <text x="1085" y="113" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">আজ, ০১ নভেম্বর ২০২৬</text>
+    <g>
+      <rect x="252" y="156" width="214" height="103" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+      <text x="272" y="182" class="bn" fill="#718196" font-size="10">সেবার এলাকা</text>
+      <text x="272" y="222" class="bn" fill="#07825D" font-size="28" font-weight="800">২৪</text>
+      <text x="442" y="237" class="bn" fill="#07825D" font-size="9" text-anchor="end">এলাকা দেখুন →</text>
+      <rect x="480" y="156" width="214" height="103" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+      <text x="500" y="182" class="bn" fill="#718196" font-size="10">সামনের সময়সূচি</text>
+      <text x="500" y="222" class="bn" fill="#526FC2" font-size="28" font-weight="800">০৮</text>
+      <text x="670" y="237" class="bn" fill="#526FC2" font-size="9" text-anchor="end">সময় দেখুন →</text>
+      <rect x="708" y="156" width="214" height="103" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+      <text x="728" y="182" class="bn" fill="#718196" font-size="10">সক্রিয় বিভ্রাট</text>
+      <text x="728" y="222" class="bn" fill="#D75D55" font-size="28" font-weight="800">০৩</text>
+      <text x="898" y="237" class="bn" fill="#D75D55" font-size="9" text-anchor="end">রিপোর্ট দেখুন →</text>
+      <rect x="936" y="156" width="232" height="103" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+      <text x="956" y="182" class="bn" fill="#718196" font-size="10">প্রকাশিত নোটিশ</text>
+      <text x="956" y="222" class="bn" fill="#BA8A2C" font-size="28" font-weight="800">১২</text>
+      <text x="1144" y="237" class="bn" fill="#BA8A2C" font-size="9" text-anchor="end">নোটিশ দেখুন →</text>
+    </g>
+    <rect x="252" y="278" width="443" height="223" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="274" y="309" class="bn" fill="#14283C" font-size="13" font-weight="800">সাম্প্রতিক বিভ্রাট</text>
+    <text x="672" y="309" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">সব রিপোর্ট →</text>
+    <path d="M274 326H674M274 380H674M274 434H674" stroke="#E9EEF3"/>
+    <text x="274" y="352" class="bn" fill="#172C40" font-size="10" font-weight="700">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="274" y="369" class="bn" fill="#8190A0" font-size="9">ঢাকা উত্তর · ১০:২৫ AM</text>
+    <rect x="592" y="340" width="77" height="21" rx="10" fill="#FFF3E8"/>
+    <text x="630" y="354" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">চলমান</text>
+    <text x="274" y="406" class="bn" fill="#172C40" font-size="10" font-weight="700">ধানমন্ডি · সরবরাহ বিঘ্ন</text>
+    <text x="274" y="423" class="bn" fill="#8190A0" font-size="9">ঢাকা দক্ষিণ · ৯:৪০ AM</text>
+    <rect x="592" y="394" width="77" height="21" rx="10" fill="#FFF3E8"/>
+    <text x="630" y="408" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">চলমান</text>
+    <text x="274" y="461" class="bn" fill="#172C40" font-size="10" font-weight="700">উত্তরা লাইন ত্রুটি</text>
+    <text x="274" y="478" class="bn" fill="#8190A0" font-size="9">ঢাকা উত্তর · গতকাল ৬:১০ PM</text>
+    <rect x="708" y="278" width="460" height="223" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="730" y="309" class="bn" fill="#14283C" font-size="13" font-weight="800">আসন্ন সময়সূচি</text>
+    <text x="1145" y="309" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">সব সময়সূচি →</text>
+    <path d="M730 326H1146M730 380H1146M730 434H1146" stroke="#E9EEF3"/>
+    <text x="730" y="352" class="bn" fill="#172C40" font-size="10" font-weight="700">মিরপুর-১২ রক্ষণাবেক্ষণ</text>
+    <text x="730" y="369" class="bn" fill="#8190A0" font-size="9">০৫ নভে · সকাল ৯টা–১১টা</text>
+    <text x="1128" y="354" class="bn" fill="#526FC2" font-size="9" font-weight="700" text-anchor="end">প্রকাশিত</text>
+    <text x="730" y="406" class="bn" fill="#172C40" font-size="10" font-weight="700">ধানমন্ডি লাইন কাজ</text>
+    <text x="730" y="423" class="bn" fill="#8190A0" font-size="9">০৬ নভে · দুপুর ১টা–৩টা</text>
+    <text x="1128" y="408" class="bn" fill="#526FC2" font-size="9" font-weight="700" text-anchor="end">প্রকাশিত</text>
+    <text x="730" y="461" class="bn" fill="#172C40" font-size="10" font-weight="700">আগ্রাবাদ ফিডার আপডেট</text>
+    <text x="730" y="478" class="bn" fill="#8190A0" font-size="9">০৮ নভে · সকাল ১০টা–১২টা</text>
+    <rect x="252" y="520" width="916" height="180" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="274" y="550" class="bn" fill="#14283C" font-size="13" font-weight="800">সর্বশেষ প্রকাশিত নোটিশ</text>
+    <text x="1144" y="550" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">নোটিশ পরিচালনা →</text>
+    <rect x="274" y="566" width="275" height="106" rx="12" fill="#F7F9FB"/>
+    <text x="291" y="591" class="bn" fill="#07825D" font-size="9" font-weight="700">সব এলাকা · ০১ নভেম্বর</text>
+    <text x="291" y="618" class="bn" fill="#172C40" font-size="11" font-weight="700">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <text x="291" y="643" class="bn" fill="#8190A0" font-size="9">প্রকাশিত · অ্যাডমিন</text>
+    <rect x="566" y="566" width="275" height="106" rx="12" fill="#F7F9FB"/>
+    <text x="583" y="591" class="bn" fill="#07825D" font-size="9" font-weight="700">ঢাকা উত্তর · ৩০ অক্টোবর</text>
+    <text x="583" y="618" class="bn" fill="#172C40" font-size="11" font-weight="700">পরিকল্পিত কাজের সময়সূচি</text>
+    <text x="583" y="643" class="bn" fill="#8190A0" font-size="9">প্রকাশিত · অ্যাডমিন</text>
+    <rect x="858" y="566" width="288" height="106" rx="12" fill="#F7F9FB"/>
+    <text x="875" y="591" class="bn" fill="#07825D" font-size="9" font-weight="700">সব এলাকা · ২৮ অক্টোবর</text>
+    <text x="875" y="618" class="bn" fill="#172C40" font-size="11" font-weight="700">নিরাপদ ব্যবহারের পরামর্শ</text>
+    <text x="875" y="643" class="bn" fill="#8190A0" font-size="9">প্রকাশিত · অ্যাডমিন</text>
+  </g>
+
+  <g id="Admin-areas-list" transform="translate(2520 82)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">সেবার এলাকা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">পাবলিক সাইটে দেখা যায় এমন এলাকাগুলো পরিচালনা করুন।</text>
+    <rect x="1014" y="96" width="154" height="35" rx="10" fill="#079B6A"/>
+    <text x="1091" y="118" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">＋ নতুন এলাকা</text>
+    <rect x="252" y="157" width="916" height="57" rx="13" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="269" y="169" width="760" height="33" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="284" y="191" class="bn" fill="#94A0AD" font-size="10">এলাকার নাম দিয়ে খুঁজুন</text>
+    <rect x="1040" y="169" width="111" height="33" rx="9" fill="#14283C"/>
+    <text x="1095" y="191" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">খুঁজুন</text>
+    <rect x="252" y="231" width="916" height="405" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="253" y="232" width="914" height="39" rx="14" fill="#F3F6F9"/>
+    <text x="272" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">এলাকা</text>
+    <text x="493" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">অভিভাবক এলাকা</text>
+    <text x="672" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">সময়সূচি</text>
+    <text x="762" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">বিভ্রাট</text>
+    <text x="844" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">অবস্থা</text>
+    <text x="1007" y="257" class="bn" fill="#718196" font-size="9" font-weight="700">অ্যাকশন</text>
+    <path d="M252 271H1168M252 339H1168M252 407H1168M252 475H1168M252 543H1168" stroke="#E9EEF3"/>
+    <text x="272" y="299" class="bn" fill="#172C40" font-size="10" font-weight="700">মিরপুর</text><text x="272" y="319" class="en" fill="#8794A1" font-size="8">mirpur</text>
+    <text x="493" y="307" class="bn" fill="#526579" font-size="9">ঢাকা উত্তর</text><text x="672" y="307" class="en" fill="#526579" font-size="9">12</text><text x="762" y="307" class="en" fill="#526579" font-size="9">4</text>
+    <rect x="836" y="289" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="868" y="303" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text>
+    <text x="1007" y="307" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="307" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="272" y="367" class="bn" fill="#172C40" font-size="10" font-weight="700">ধানমন্ডি</text><text x="272" y="387" class="en" fill="#8794A1" font-size="8">dhanmondi</text>
+    <text x="493" y="375" class="bn" fill="#526579" font-size="9">ঢাকা দক্ষিণ</text><text x="672" y="375" class="en" fill="#526579" font-size="9">8</text><text x="762" y="375" class="en" fill="#526579" font-size="9">2</text>
+    <rect x="836" y="357" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="868" y="371" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text>
+    <text x="1007" y="375" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="375" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="272" y="435" class="bn" fill="#172C40" font-size="10" font-weight="700">উত্তরা</text><text x="272" y="455" class="en" fill="#8794A1" font-size="8">uttara</text>
+    <text x="493" y="443" class="bn" fill="#526579" font-size="9">ঢাকা উত্তর</text><text x="672" y="443" class="en" fill="#526579" font-size="9">6</text><text x="762" y="443" class="en" fill="#526579" font-size="9">1</text>
+    <rect x="836" y="425" width="63" height="21" rx="10" fill="#F1F3F5"/><text x="868" y="439" class="bn" fill="#7B8793" font-size="8" font-weight="700" text-anchor="middle">নিষ্ক্রিয়</text>
+    <text x="1007" y="443" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="443" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="272" y="503" class="bn" fill="#172C40" font-size="10" font-weight="700">আগ্রাবাদ</text><text x="272" y="523" class="en" fill="#8794A1" font-size="8">agrabad</text>
+    <text x="493" y="511" class="bn" fill="#526579" font-size="9">চট্টগ্রাম</text><text x="672" y="511" class="en" fill="#526579" font-size="9">9</text><text x="762" y="511" class="en" fill="#526579" font-size="9">3</text>
+    <rect x="836" y="493" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="868" y="507" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text>
+    <text x="1007" y="511" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="511" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="272" y="571" class="bn" fill="#172C40" font-size="10" font-weight="700">সোনাডাঙ্গা</text><text x="272" y="591" class="en" fill="#8794A1" font-size="8">sonadanga</text>
+    <text x="493" y="579" class="bn" fill="#526579" font-size="9">খুলনা</text><text x="672" y="579" class="en" fill="#526579" font-size="9">2</text><text x="762" y="579" class="en" fill="#526579" font-size="9">0</text>
+    <rect x="836" y="561" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="868" y="575" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text>
+    <text x="1007" y="579" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="579" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="272" y="671" class="bn" fill="#8190A0" font-size="9">১–৫ / ২৪টি এলাকা</text>
+    <text x="1148" y="671" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">← ১  ২  ৩  …  ৫ →</text>
+  </g>
+
+  <g id="Admin-area-create" transform="translate(40 902)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">নতুন সেবার এলাকা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">পাবলিক সাইটে অনুসন্ধানযোগ্য নতুন এলাকা যোগ করুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">এলাকার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">এলাকার নাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="408" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="260" class="bn" fill="#9AA7B4" font-size="10">যেমন: মিরপুর</text>
+    <text x="716" y="224" class="en" fill="#33485D" font-size="9" font-weight="700">URL SLUG <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="234" width="424" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="260" class="en" fill="#9AA7B4" font-size="10">mirpur</text>
+    <text x="280" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">অভিভাবক এলাকা</text>
+    <rect x="280" y="320" width="408" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="346" class="bn" fill="#718196" font-size="10">ঢাকা উত্তর নির্বাচন করুন</text>
+    <path d="M664 337L671 344L678 337" stroke="#8493A2" stroke-width="1.5"/>
+    <text x="716" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">দৃশ্যমানতা</text>
+    <rect x="716" y="320" width="424" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <circle cx="736" cy="340" r="5" fill="#079B6A"/>
+    <text x="752" y="346" class="bn" fill="#526579" font-size="10">সক্রিয় ও পাবলিক সাইটে দৃশ্যমান</text>
+    <text x="280" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="407" width="860" height="99" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="433" class="bn" fill="#9AA7B4" font-size="10">এলাকা সম্পর্কে সংক্ষিপ্ত তথ্য লিখুন…</text>
+    <rect x="280" y="526" width="860" height="45" rx="10" fill="#FFF8EC"/>
+    <text x="300" y="553" class="bn" fill="#926416" font-size="9">এই এলাকাটি কোনো বিভ্রাট বা সময়সূচিতে ব্যবহৃত হলে মুছে ফেলা যাবে না।</text>
+    <rect x="280" y="590" width="142" height="38" rx="10" fill="#079B6A"/>
+    <text x="351" y="614" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">এলাকা তৈরি করুন</text>
+    <rect x="433" y="590" width="110" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="488" y="614" class="bn" fill="#526579" font-size="10" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-area-edit" transform="translate(1280 902)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">এলাকা সম্পাদনা · মিরপুর</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">এলাকার বিবরণ, অভিভাবক সম্পর্ক ও প্রকাশ্যতা হালনাগাদ করুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">এলাকার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">এলাকার নাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="408" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="260" class="bn" fill="#172C40" font-size="10">মিরপুর</text>
+    <text x="716" y="224" class="en" fill="#33485D" font-size="9" font-weight="700">URL SLUG <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="234" width="424" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="260" class="en" fill="#172C40" font-size="10">mirpur</text>
+    <text x="280" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">অভিভাবক এলাকা</text>
+    <rect x="280" y="320" width="408" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="346" class="bn" fill="#172C40" font-size="10">ঢাকা উত্তর</text>
+    <text x="716" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">দৃশ্যমানতা</text>
+    <rect x="716" y="320" width="424" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <circle cx="736" cy="340" r="5" fill="#079B6A"/>
+    <text x="752" y="346" class="bn" fill="#526579" font-size="10">সক্রিয় ও পাবলিক সাইটে দৃশ্যমান</text>
+    <text x="280" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="407" width="860" height="99" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="433" class="bn" fill="#526579" font-size="10">মিরপুর এলাকার বিদ্যুৎ সেবা সংক্রান্ত তথ্য।</text>
+    <rect x="280" y="526" width="860" height="45" rx="10" fill="#E8F7F1"/>
+    <text x="300" y="553" class="bn" fill="#07825D" font-size="9">সফলভাবে সংরক্ষিত হলে সব পরিবর্তন পাবলিক এলাকায় প্রতিফলিত হবে।</text>
+    <rect x="280" y="590" width="128" height="38" rx="10" fill="#079B6A"/>
+    <text x="344" y="614" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">পরিবর্তন সংরক্ষণ</text>
+    <rect x="419" y="590" width="110" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="474" y="614" class="bn" fill="#526579" font-size="10" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-outage-reasons-list" transform="translate(2520 902)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">বিভ্রাটের কারণ</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">বিভ্রাট রিপোর্টে ব্যবহৃত কারণের তালিকা পরিচালনা করুন।</text>
+    <rect x="1007" y="96" width="161" height="35" rx="10" fill="#079B6A"/>
+    <text x="1087" y="118" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">＋ নতুন কারণ</text>
+    <rect x="252" y="157" width="916" height="432" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="253" y="158" width="914" height="40" rx="14" fill="#F3F6F9"/>
+    <text x="273" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">কারণ</text>
+    <text x="627" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">বিভ্রাট রিপোর্ট</text>
+    <text x="789" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">অবস্থা</text>
+    <text x="1002" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">অ্যাকশন</text>
+    <path d="M252 198H1168M252 268H1168M252 338H1168M252 408H1168M252 478H1168" stroke="#E9EEF3"/>
+    <text x="273" y="229" class="bn" fill="#172C40" font-size="11" font-weight="700">বিদ্যুৎ লাইনে ত্রুটি</text><text x="273" y="249" class="bn" fill="#8794A1" font-size="9">লাইন বা ফিডার সংক্রান্ত সমস্যা</text>
+    <text x="627" y="239" class="en" fill="#526579" font-size="10">18</text><rect x="780" y="220" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="812" y="234" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1002" y="239" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="239" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="299" class="bn" fill="#172C40" font-size="11" font-weight="700">পরিকল্পিত রক্ষণাবেক্ষণ</text><text x="273" y="319" class="bn" fill="#8794A1" font-size="9">নির্ধারিত সেবা কাজ</text>
+    <text x="627" y="309" class="en" fill="#526579" font-size="10">12</text><rect x="780" y="290" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="812" y="304" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1002" y="309" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="309" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="369" class="bn" fill="#172C40" font-size="11" font-weight="700">যান্ত্রিক ত্রুটি</text><text x="273" y="389" class="bn" fill="#8794A1" font-size="9">সাবস্টেশন সরঞ্জাম সমস্যা</text>
+    <text x="627" y="379" class="en" fill="#526579" font-size="10">7</text><rect x="780" y="360" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="812" y="374" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1002" y="379" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="379" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="439" class="bn" fill="#172C40" font-size="11" font-weight="700">আবহাওয়াজনিত</text><text x="273" y="459" class="bn" fill="#8794A1" font-size="9">ঝড় বা প্রাকৃতিক কারণে</text>
+    <text x="627" y="449" class="en" fill="#526579" font-size="10">4</text><rect x="780" y="430" width="63" height="21" rx="10" fill="#F1F3F5"/><text x="812" y="444" class="bn" fill="#7B8793" font-size="8" font-weight="700" text-anchor="middle">নিষ্ক্রিয়</text><text x="1002" y="449" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="449" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="509" class="bn" fill="#172C40" font-size="11" font-weight="700">জরুরি মেরামত</text><text x="273" y="529" class="bn" fill="#8794A1" font-size="9">জরুরি সেবা পুনরুদ্ধার কাজ</text>
+    <text x="627" y="519" class="en" fill="#526579" font-size="10">3</text><rect x="780" y="500" width="63" height="21" rx="10" fill="#E8F7F1"/><text x="812" y="514" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1002" y="519" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1080" y="519" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <rect x="252" y="610" width="916" height="48" rx="12" fill="#FFF8EC"/>
+    <text x="276" y="639" class="bn" fill="#926416" font-size="9">যে কারণ কোনো রিপোর্টে ব্যবহৃত হয়েছে, সেটি মুছতে বাধা দেওয়া হতে পারে।</text>
+    <text x="270" y="690" class="bn" fill="#8190A0" font-size="9">৫টি কারণ</text>
+  </g>
+
+  <g id="Admin-reason-create" transform="translate(40 1722)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">নতুন বিভ্রাটের কারণ</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">নতুন বিভ্রাট রিপোর্টের জন্য নির্বাচনযোগ্য কারণ যোগ করুন।</text>
+    <rect x="252" y="158" width="916" height="405" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">কারণের বিবরণ</text>
+    <text x="280" y="229" class="bn" fill="#33485D" font-size="9" font-weight="700">কারণের নাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="240" width="860" height="44" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="267" class="bn" fill="#9AA7B4" font-size="10">যেমন: বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="280" y="322" class="bn" fill="#33485D" font-size="9" font-weight="700">প্রাপ্যতা</text>
+    <rect x="280" y="333" width="860" height="42" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <circle cx="300" cy="354" r="5" fill="#079B6A"/>
+    <text x="316" y="359" class="bn" fill="#526579" font-size="10">সক্রিয় — নতুন রিপোর্টে বেছে নেওয়া যাবে</text>
+    <text x="280" y="414" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="425" width="860" height="73" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="450" class="bn" fill="#9AA7B4" font-size="10">ঐচ্ছিক সংক্ষিপ্ত ব্যাখ্যা</text>
+    <rect x="280" y="516" width="137" height="38" rx="10" fill="#079B6A"/>
+    <text x="348" y="540" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">কারণ তৈরি করুন</text>
+    <rect x="428" y="516" width="110" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="483" y="540" class="bn" fill="#526579" font-size="10" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-reason-edit" transform="translate(1280 1722)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">কারণ সম্পাদনা · বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">কারণের নাম, বিবরণ বা নতুন রিপোর্টে প্রাপ্যতা পরিবর্তন করুন।</text>
+    <rect x="252" y="158" width="916" height="405" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">কারণের বিবরণ</text>
+    <text x="280" y="229" class="bn" fill="#33485D" font-size="9" font-weight="700">কারণের নাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="240" width="860" height="44" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="267" class="bn" fill="#172C40" font-size="10">বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="280" y="322" class="bn" fill="#33485D" font-size="9" font-weight="700">প্রাপ্যতা</text>
+    <rect x="280" y="333" width="860" height="42" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <circle cx="300" cy="354" r="5" fill="#079B6A"/>
+    <text x="316" y="359" class="bn" fill="#526579" font-size="10">সক্রিয় — নতুন রিপোর্টে বেছে নেওয়া যাবে</text>
+    <text x="280" y="414" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="425" width="860" height="73" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="450" class="bn" fill="#526579" font-size="10">লাইন বা ফিডার সংক্রান্ত সমস্যা।</text>
+    <rect x="280" y="516" width="134" height="38" rx="10" fill="#079B6A"/>
+    <text x="347" y="540" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">পরিবর্তন সংরক্ষণ</text>
+    <rect x="425" y="516" width="110" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="480" y="540" class="bn" fill="#526579" font-size="10" font-weight="700" text-anchor="middle">বাতিল</text>
+    <rect x="252" y="584" width="916" height="48" rx="12" fill="#E8F7F1"/>
+    <text x="276" y="613" class="bn" fill="#07825D" font-size="9">পরিবর্তন সংরক্ষণের পর সর্বশেষ তথ্য হালনাগাদ হবে।</text>
+  </g>
+
+  <g id="Admin-schedules-list" transform="translate(2520 1722)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">লোডশেডিং সময়সূচি</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">এলাকাভিত্তিক পরিকল্পিত বিদ্যুৎ বিরতি তৈরি ও প্রকাশ করুন।</text>
+    <rect x="1015" y="96" width="153" height="35" rx="10" fill="#079B6A"/>
+    <text x="1091" y="118" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">＋ সময়সূচি যোগ</text>
+    <rect x="252" y="157" width="916" height="399" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="253" y="158" width="914" height="40" rx="14" fill="#F3F6F9"/>
+    <text x="273" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">সময়সূচি</text>
+    <text x="541" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">এলাকা</text>
+    <text x="704" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">তারিখ ও সময়</text>
+    <text x="902" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">অবস্থা</text>
+    <text x="1032" y="183" class="bn" fill="#718196" font-size="9" font-weight="700">অ্যাকশন</text>
+    <path d="M252 198H1168M252 268H1168M252 338H1168M252 408H1168M252 478H1168" stroke="#E9EEF3"/>
+    <text x="273" y="230" class="bn" fill="#172C40" font-size="10" font-weight="700">মিরপুর-১২ রক্ষণাবেক্ষণ</text><text x="273" y="249" class="bn" fill="#8794A1" font-size="8">অ্যাডমিন · নিয়মিত কাজ</text>
+    <text x="541" y="239" class="bn" fill="#526579" font-size="9">মিরপুর</text><text x="704" y="230" class="en" fill="#526579" font-size="9">05 Nov 2026</text><text x="704" y="248" class="en" fill="#8794A1" font-size="8">09:00 – 11:00</text>
+    <rect x="896" y="220" width="76" height="21" rx="10" fill="#E8F7F1"/><text x="934" y="234" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">প্রকাশিত</text><text x="1023" y="239" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1093" y="239" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="300" class="bn" fill="#172C40" font-size="10" font-weight="700">ধানমন্ডি লাইন কাজ</text><text x="273" y="319" class="bn" fill="#8794A1" font-size="8">অ্যাডমিন · কাজের নোট</text>
+    <text x="541" y="309" class="bn" fill="#526579" font-size="9">ধানমন্ডি</text><text x="704" y="300" class="en" fill="#526579" font-size="9">06 Nov 2026</text><text x="704" y="318" class="en" fill="#8794A1" font-size="8">13:00 – 15:00</text>
+    <rect x="896" y="290" width="76" height="21" rx="10" fill="#E8F7F1"/><text x="934" y="304" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">প্রকাশিত</text><text x="1023" y="309" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1093" y="309" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="370" class="bn" fill="#172C40" font-size="10" font-weight="700">আগ্রাবাদ ফিডার আপডেট</text><text x="273" y="389" class="bn" fill="#8794A1" font-size="8">অ্যাডমিন · খসড়া</text>
+    <text x="541" y="379" class="bn" fill="#526579" font-size="9">আগ্রাবাদ</text><text x="704" y="370" class="en" fill="#526579" font-size="9">08 Nov 2026</text><text x="704" y="388" class="en" fill="#8794A1" font-size="8">10:00 – 12:00</text>
+    <rect x="896" y="360" width="76" height="21" rx="10" fill="#F1F3F5"/><text x="934" y="374" class="bn" fill="#7B8793" font-size="8" font-weight="700" text-anchor="middle">খসড়া</text><text x="1023" y="379" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1093" y="379" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="273" y="440" class="bn" fill="#172C40" font-size="10" font-weight="700">উত্তরা সেবা কাজ</text><text x="273" y="459" class="bn" fill="#8794A1" font-size="8">অ্যাডমিন · সাময়িক বিরতি</text>
+    <text x="541" y="449" class="bn" fill="#526579" font-size="9">উত্তরা</text><text x="704" y="440" class="en" fill="#526579" font-size="9">10 Nov 2026</text><text x="704" y="458" class="en" fill="#8794A1" font-size="8">08:00 – 10:30</text>
+    <rect x="896" y="430" width="76" height="21" rx="10" fill="#FFF4E6"/><text x="934" y="444" class="bn" fill="#9C6B22" font-size="8" font-weight="700" text-anchor="middle">বাতিল</text><text x="1023" y="449" class="bn" fill="#07825D" font-size="9" font-weight="700">সম্পাদনা</text><text x="1093" y="449" class="bn" fill="#CC5A5A" font-size="9" font-weight="700">মুছুন</text>
+    <text x="270" y="594" class="bn" fill="#8190A0" font-size="9">১–৪ / ৮টি সময়সূচি</text>
+    <text x="1148" y="594" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">← ১  ২ →</text>
+    <rect x="252" y="616" width="916" height="46" rx="12" fill="#FFF8EC"/>
+    <text x="276" y="644" class="bn" fill="#926416" font-size="9">প্রকাশিত সময়সূচি পাবলিক সাইটে দৃশ্যমান। সময় স্থানীয় এবং পরিবর্তিত হতে পারে।</text>
+  </g>
+
+  <g id="Admin-schedule-create" transform="translate(40 2542)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">নতুন সময়সূচি</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">একটি এলাকার জন্য পরিকল্পিত লোডশেডিং বা সেবা বিরতি রেকর্ড করুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">সময়সূচির বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="260" class="bn" fill="#9AA7B4" font-size="10">যেমন: মিরপুর ফিডার রক্ষণাবেক্ষণ</text>
+    <text x="280" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">সেবার এলাকা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="320" width="408" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="345" class="bn" fill="#718196" font-size="10">এলাকা নির্বাচন করুন</text>
+    <text x="716" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">তারিখ <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="320" width="424" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="345" class="en" fill="#718196" font-size="10">dd / mm / yyyy</text>
+    <text x="280" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">শুরুর সময় <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="407" width="408" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="432" class="en" fill="#718196" font-size="10">09:00 AM</text>
+    <text x="716" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">শেষের সময় <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="407" width="424" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="432" class="en" fill="#718196" font-size="10">11:00 AM</text>
+    <text x="280" y="484" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="494" width="860" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="518" class="bn" fill="#718196" font-size="10">খসড়া — প্রকাশের আগে পরীক্ষা করুন</text>
+    <text x="280" y="562" class="bn" fill="#33485D" font-size="9" font-weight="700">নোট</text>
+    <rect x="280" y="572" width="860" height="42" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="598" class="bn" fill="#9AA7B4" font-size="10">ঐচ্ছিক তথ্য…</text>
+    <rect x="280" y="622" width="133" height="34" rx="9" fill="#079B6A"/>
+    <text x="346" y="644" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">সময়সূচি তৈরি</text>
+    <rect x="422" y="622" width="102" height="34" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="473" y="644" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-schedule-edit" transform="translate(1280 2542)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">সময়সূচি সম্পাদনা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">প্রকাশিত পরিকল্পনা হালনাগাদ করুন বা খসড়া হিসেবে সংরক্ষণ করুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">সময়সূচির বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="41" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="260" class="bn" fill="#172C40" font-size="10">মিরপুর-১২ রক্ষণাবেক্ষণ</text>
+    <text x="280" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">সেবার এলাকা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="320" width="408" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="345" class="bn" fill="#172C40" font-size="10">মিরপুর</text>
+    <text x="716" y="310" class="bn" fill="#33485D" font-size="9" font-weight="700">তারিখ <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="320" width="424" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="345" class="en" fill="#172C40" font-size="10">05 / 11 / 2026</text>
+    <text x="280" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">শুরুর সময় <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="407" width="408" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="432" class="en" fill="#172C40" font-size="10">09:00 AM</text>
+    <text x="716" y="397" class="bn" fill="#33485D" font-size="9" font-weight="700">শেষের সময় <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="407" width="424" height="40" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="731" y="432" class="en" fill="#172C40" font-size="10">11:00 AM</text>
+    <text x="280" y="484" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="494" width="860" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="518" class="bn" fill="#172C40" font-size="10">প্রকাশিত</text>
+    <text x="280" y="562" class="bn" fill="#33485D" font-size="9" font-weight="700">নোট</text>
+    <rect x="280" y="572" width="860" height="42" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="598" class="bn" fill="#526579" font-size="10">নির্ধারিত রক্ষণাবেক্ষণের জন্য সাময়িক বিদ্যুৎ বিরতি।</text>
+    <rect x="280" y="622" width="132" height="34" rx="9" fill="#079B6A"/>
+    <text x="346" y="644" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">পরিবর্তন সংরক্ষণ</text>
+    <rect x="421" y="622" width="102" height="34" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="472" y="644" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-outages-list" transform="translate(2520 2542)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">বিভ্রাট রিপোর্ট</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">সক্রিয় ঘটনা দেখুন এবং পুনঃসংযোগের তথ্য হালনাগাদ করুন।</text>
+    <rect x="1015" y="96" width="153" height="35" rx="10" fill="#079B6A"/>
+    <text x="1091" y="118" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">＋ বিভ্রাট রিপোর্ট</text>
+    <rect x="252" y="157" width="916" height="67" rx="14" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="274" y="179" class="bn" fill="#526579" font-size="8" font-weight="700">অবস্থা</text>
+    <text x="494" y="179" class="bn" fill="#526579" font-size="8" font-weight="700">এলাকা</text>
+    <rect x="274" y="187" width="201" height="26" rx="8" fill="#FFFFFF" stroke="#DCE4EC"/><text x="286" y="205" class="bn" fill="#718196" font-size="9">সব অবস্থা</text>
+    <rect x="494" y="187" width="311" height="26" rx="8" fill="#FFFFFF" stroke="#DCE4EC"/><text x="506" y="205" class="bn" fill="#718196" font-size="9">সব এলাকা</text>
+    <rect x="824" y="187" width="90" height="26" rx="8" fill="#14283C"/><text x="869" y="205" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">ফিল্টার</text>
+    <text x="931" y="205" class="bn" fill="#07825D" font-size="9" font-weight="700">ফিল্টার মুছুন</text>
+    <rect x="252" y="241" width="916" height="398" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="253" y="242" width="914" height="39" rx="14" fill="#F3F6F9"/>
+    <text x="273" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">বিভ্রাট</text><text x="500" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">এলাকা</text><text x="626" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">শুরু</text><text x="778" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">সম্ভাব্য পুনঃসংযোগ</text><text x="960" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">অবস্থা</text><text x="1080" y="267" class="bn" fill="#718196" font-size="8" font-weight="700">অ্যাকশন</text>
+    <path d="M252 281H1168M252 351H1168M252 421H1168M252 491H1168M252 561H1168" stroke="#E9EEF3"/>
+    <text x="273" y="311" class="bn" fill="#172C40" font-size="9" font-weight="700">মিরপুর-১০ এলাকায় বিভ্রাট</text><text x="273" y="331" class="bn" fill="#8794A1" font-size="8">অপ্রত্যাশিত · লাইন ত্রুটি</text><text x="500" y="321" class="bn" fill="#526579" font-size="8">মিরপুর</text><text x="626" y="321" class="en" fill="#526579" font-size="8">01 Nov, 10:25</text><text x="778" y="321" class="en" fill="#526579" font-size="8">01 Nov, 12:30</text><rect x="955" y="300" width="60" height="20" rx="10" fill="#FFF3E8"/><text x="985" y="314" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1032" y="321" class="bn" fill="#07825D" font-size="8" font-weight="700">দেখুন</text><text x="1081" y="321" class="bn" fill="#526FC2" font-size="8" font-weight="700">সম্পাদনা</text>
+    <text x="273" y="381" class="bn" fill="#172C40" font-size="9" font-weight="700">ধানমন্ডি ২৭ · সরবরাহ বিঘ্ন</text><text x="273" y="401" class="bn" fill="#8794A1" font-size="8">পরিকল্পিত · সাবস্টেশন কাজ</text><text x="500" y="391" class="bn" fill="#526579" font-size="8">ধানমন্ডি</text><text x="626" y="391" class="en" fill="#526579" font-size="8">01 Nov, 09:40</text><text x="778" y="391" class="en" fill="#526579" font-size="8">01 Nov, 13:00</text><rect x="955" y="370" width="60" height="20" rx="10" fill="#FFF3E8"/><text x="985" y="384" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1032" y="391" class="bn" fill="#07825D" font-size="8" font-weight="700">দেখুন</text><text x="1081" y="391" class="bn" fill="#526FC2" font-size="8" font-weight="700">সম্পাদনা</text>
+    <text x="273" y="451" class="bn" fill="#172C40" font-size="9" font-weight="700">উত্তরা লাইন ত্রুটি</text><text x="273" y="471" class="bn" fill="#8794A1" font-size="8">যান্ত্রিক ত্রুটি</text><text x="500" y="461" class="bn" fill="#526579" font-size="8">উত্তরা</text><text x="626" y="461" class="en" fill="#526579" font-size="8">31 Oct, 18:10</text><text x="778" y="461" class="en" fill="#526579" font-size="8">Not provided</text><rect x="955" y="440" width="60" height="20" rx="10" fill="#E8F7F1"/><text x="985" y="454" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text><text x="1032" y="461" class="bn" fill="#07825D" font-size="8" font-weight="700">দেখুন</text><text x="1081" y="461" class="bn" fill="#526FC2" font-size="8" font-weight="700">সম্পাদনা</text>
+    <text x="273" y="521" class="bn" fill="#172C40" font-size="9" font-weight="700">আগ্রাবাদ ফিডার · জরুরি মেরামত</text><text x="273" y="541" class="bn" fill="#8794A1" font-size="8">অপ্রত্যাশিত · জরুরি কাজ</text><text x="500" y="531" class="bn" fill="#526579" font-size="8">আগ্রাবাদ</text><text x="626" y="531" class="en" fill="#526579" font-size="8">31 Oct, 15:10</text><text x="778" y="531" class="en" fill="#526579" font-size="8">31 Oct, 18:00</text><rect x="955" y="510" width="60" height="20" rx="10" fill="#FFF3E8"/><text x="985" y="524" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text><text x="1032" y="531" class="bn" fill="#07825D" font-size="8" font-weight="700">দেখুন</text><text x="1081" y="531" class="bn" fill="#526FC2" font-size="8" font-weight="700">সম্পাদনা</text>
+    <text x="270" y="609" class="bn" fill="#8190A0" font-size="9">১–৪ / ১২টি রিপোর্ট</text>
+    <text x="1148" y="609" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">← ১  ২  ৩ →</text>
+  </g>
+
+  <g id="Admin-outage-create" transform="translate(40 3362)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">নতুন বিভ্রাট রিপোর্ট</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">সেবার এলাকায় চলমান বিদ্যুৎ বিঘ্নের তথ্য প্রকাশ করুন।</text>
+    <rect x="252" y="158" width="916" height="522" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">ঘটনার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="258" class="bn" fill="#9AA7B4" font-size="9">যেমন: মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="280" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">সেবার এলাকা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="317" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="341" class="bn" fill="#718196" font-size="9">এলাকা নির্বাচন করুন</text>
+    <text x="716" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">সম্পর্কিত সময়সূচি</text>
+    <rect x="716" y="317" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="341" class="bn" fill="#718196" font-size="9">ঐচ্ছিক সময়সূচি নির্বাচন</text>
+    <text x="280" y="387" class="bn" fill="#33485D" font-size="9" font-weight="700">বিভ্রাটের কারণ</text>
+    <rect x="280" y="397" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="421" class="bn" fill="#718196" font-size="9">কারণ নির্বাচন করুন</text>
+    <text x="716" y="387" class="bn" fill="#33485D" font-size="9" font-weight="700">ধরন <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="397" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="421" class="bn" fill="#718196" font-size="9">অপ্রত্যাশিত</text>
+    <text x="280" y="467" class="bn" fill="#33485D" font-size="9" font-weight="700">শুরু হয়েছে <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="477" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="501" class="en" fill="#718196" font-size="9">01 / 11 / 2026, 10:25 AM</text>
+    <text x="716" y="467" class="bn" fill="#33485D" font-size="9" font-weight="700">সম্ভাব্য পুনঃসংযোগ</text>
+    <rect x="716" y="477" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="501" class="en" fill="#718196" font-size="9">01 / 11 / 2026, 12:30 PM</text>
+    <text x="280" y="547" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="557" width="860" height="35" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="580" class="bn" fill="#718196" font-size="9">সক্রিয়</text>
+    <text x="280" y="622" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="632" width="570" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="656" class="bn" fill="#9AA7B4" font-size="9">অতিরিক্ত তথ্য লিখুন…</text>
+    <rect x="874" y="632" width="138" height="36" rx="9" fill="#079B6A"/><text x="943" y="655" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">রিপোর্ট প্রকাশ</text>
+    <rect x="1022" y="632" width="116" height="36" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="1080" y="655" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-outage-detail" transform="translate(1280 3362)">
+    <use href="#admin-shell"/>
+    <text x="268" y="105" class="bn" fill="#07825D" font-size="9" font-weight="700">← সব বিভ্রাট</text>
+    <rect x="862" y="87" width="101" height="33" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="912" y="108" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">সম্পাদনা</text>
+    <rect x="971" y="87" width="116" height="33" rx="9" fill="#079B6A"/><text x="1029" y="108" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text>
+    <rect x="1095" y="87" width="73" height="33" rx="9" fill="#FFFFFF" stroke="#F0D8D8"/><text x="1131" y="108" class="bn" fill="#C95757" font-size="9" font-weight="700" text-anchor="middle">মুছুন</text>
+    <rect x="252" y="137" width="916" height="518" rx="17" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="252" y="137" width="916" height="127" rx="17" fill="#FFFFFF"/>
+    <rect x="278" y="158" width="62" height="22" rx="11" fill="#FFF3E8"/><text x="309" y="173" class="bn" fill="#A95924" font-size="8" font-weight="700" text-anchor="middle">সক্রিয়</text>
+    <rect x="347" y="158" width="89" height="22" rx="11" fill="#EEF3FF"/><text x="391" y="173" class="bn" fill="#4669B5" font-size="8" font-weight="700" text-anchor="middle">অপ্রত্যাশিত</text>
+    <text x="278" y="215" class="bn" fill="#14283C" font-size="23" font-weight="800">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="278" y="242" class="bn" fill="#718196" font-size="10">মিরপুর · রিপোর্ট করেছেন অ্যাডমিন · সর্বশেষ আপডেট ১১:২৫ AM</text>
+    <path d="M278 265H1142" stroke="#E8EDF2"/>
+    <text x="278" y="302" class="bn" fill="#8190A0" font-size="9" font-weight="700">শুরু হয়েছে</text><text x="278" y="325" class="bn" fill="#172C40" font-size="11" font-weight="700">০১ নভেম্বর, ১০:২৫ AM</text>
+    <text x="574" y="302" class="bn" fill="#8190A0" font-size="9" font-weight="700">সম্ভাব্য পুনঃসংযোগ</text><text x="574" y="325" class="bn" fill="#172C40" font-size="11" font-weight="700">০১ নভেম্বর, ১২:৩০ PM</text>
+    <text x="872" y="302" class="bn" fill="#8190A0" font-size="9" font-weight="700">পুনঃসংযোগ হয়েছে</text><text x="872" y="325" class="bn" fill="#718196" font-size="11">এখনো রেকর্ড হয়নি</text>
+    <text x="278" y="370" class="bn" fill="#8190A0" font-size="9" font-weight="700">কারণ</text><text x="278" y="393" class="bn" fill="#172C40" font-size="11" font-weight="700">বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="574" y="370" class="bn" fill="#8190A0" font-size="9" font-weight="700">সম্পর্কিত সময়সূচি</text><text x="574" y="393" class="bn" fill="#718196" font-size="11">কোনো সময়সূচি নেই</text>
+    <text x="872" y="370" class="bn" fill="#8190A0" font-size="9" font-weight="700">শেষ হালনাগাদ</text><text x="872" y="393" class="en" fill="#172C40" font-size="10">01 Nov 2026, 11:25 AM</text>
+    <text x="278" y="438" class="bn" fill="#8190A0" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="278" y="452" width="864" height="82" rx="12" fill="#F7F9FB"/>
+    <text x="297" y="479" class="bn" fill="#526579" font-size="10">কারিগরি দল বিষয়টি পর্যালোচনা করছে। নিরাপদে থাকতে বিদ্যুৎ লাইনের</text>
+    <text x="297" y="501" class="bn" fill="#526579" font-size="10">কাছে যাবেন না। পুনঃসংযোগের সময় অনুমাননির্ভর।</text>
+    <rect x="278" y="551" width="864" height="69" rx="12" fill="#FFF8EC"/>
+    <text x="299" y="578" class="bn" fill="#926416" font-size="9" font-weight="700">পুনঃসংযোগ রেকর্ড করুন</text>
+    <text x="299" y="600" class="bn" fill="#8C774F" font-size="9">“পুনঃসংযুক্ত” নির্বাচন করলে বর্তমান সময় সংরক্ষিত হবে।</text>
+  </g>
+
+  <g id="Admin-outage-edit" transform="translate(2520 3362)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">বিভ্রাট সম্পাদনা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">প্রকাশ্য বিভ্রাটের তথ্য, অবস্থা বা পুনঃসংযোগের অনুমান হালনাগাদ করুন।</text>
+    <rect x="252" y="158" width="916" height="522" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">ঘটনার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="258" class="bn" fill="#172C40" font-size="9">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="280" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">সেবার এলাকা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="317" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="341" class="bn" fill="#172C40" font-size="9">মিরপুর</text>
+    <text x="716" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">সম্পর্কিত সময়সূচি</text>
+    <rect x="716" y="317" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="341" class="bn" fill="#718196" font-size="9">কোনো সময়সূচি নেই</text>
+    <text x="280" y="387" class="bn" fill="#33485D" font-size="9" font-weight="700">বিভ্রাটের কারণ</text>
+    <rect x="280" y="397" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="421" class="bn" fill="#172C40" font-size="9">বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="716" y="387" class="bn" fill="#33485D" font-size="9" font-weight="700">ধরন <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="397" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="421" class="bn" fill="#172C40" font-size="9">অপ্রত্যাশিত</text>
+    <text x="280" y="467" class="bn" fill="#33485D" font-size="9" font-weight="700">শুরু হয়েছে <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="477" width="408" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="501" class="en" fill="#172C40" font-size="9">01 / 11 / 2026, 10:25 AM</text>
+    <text x="716" y="467" class="bn" fill="#33485D" font-size="9" font-weight="700">সম্ভাব্য পুনঃসংযোগ</text>
+    <rect x="716" y="477" width="424" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="501" class="en" fill="#172C40" font-size="9">01 / 11 / 2026, 12:30 PM</text>
+    <text x="280" y="547" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="557" width="860" height="35" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="580" class="bn" fill="#172C40" font-size="9">সক্রিয়</text>
+    <text x="280" y="622" class="bn" fill="#33485D" font-size="9" font-weight="700">বিবরণ</text>
+    <rect x="280" y="632" width="570" height="37" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="656" class="bn" fill="#526579" font-size="9">কারিগরি দল পর্যালোচনা করছে।</text>
+    <rect x="874" y="632" width="138" height="36" rx="9" fill="#079B6A"/><text x="943" y="655" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">পরিবর্তন সংরক্ষণ</text>
+    <rect x="1022" y="632" width="116" height="36" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="1080" y="655" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-announcements-list" transform="translate(40 4182)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">ঘোষণা ও নোটিশ</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">একটি নির্দিষ্ট এলাকা বা সকলের জন্য বিজ্ঞপ্তি পরিচালনা করুন।</text>
+    <rect x="1000" y="96" width="168" height="35" rx="10" fill="#079B6A"/>
+    <text x="1084" y="118" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">＋ নতুন ঘোষণা</text>
+    <rect x="252" y="157" width="916" height="62" rx="13" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="274" y="179" class="bn" fill="#526579" font-size="8" font-weight="700">অবস্থা</text><rect x="274" y="187" width="224" height="24" rx="8" fill="#FFFFFF" stroke="#DCE4EC"/><text x="286" y="204" class="bn" fill="#718196" font-size="8">সব অবস্থা</text>
+    <rect x="511" y="187" width="100" height="24" rx="8" fill="#14283C"/><text x="561" y="204" class="bn" fill="#FFFFFF" font-size="8" font-weight="700" text-anchor="middle">ফিল্টার</text>
+    <text x="631" y="204" class="bn" fill="#07825D" font-size="8" font-weight="700">ফিল্টার মুছুন</text>
+    <rect x="252" y="235" width="916" height="403" rx="15" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <rect x="253" y="236" width="914" height="39" rx="14" fill="#F3F6F9"/>
+    <text x="273" y="261" class="bn" fill="#718196" font-size="8" font-weight="700">ঘোষণা</text><text x="596" y="261" class="bn" fill="#718196" font-size="8" font-weight="700">পাঠকগোষ্ঠী</text><text x="737" y="261" class="bn" fill="#718196" font-size="8" font-weight="700">প্রকাশনা</text><text x="909" y="261" class="bn" fill="#718196" font-size="8" font-weight="700">লেখক</text><text x="1065" y="261" class="bn" fill="#718196" font-size="8" font-weight="700">অ্যাকশন</text>
+    <path d="M252 275H1168M252 345H1168M252 415H1168M252 485H1168M252 555H1168" stroke="#E9EEF3"/>
+    <text x="273" y="305" class="bn" fill="#172C40" font-size="9" font-weight="700">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text><text x="273" y="325" class="bn" fill="#8794A1" font-size="8">সর্বশেষ সেবাতথ্য ও নির্দেশনা দেখুন…</text><text x="596" y="315" class="bn" fill="#526579" font-size="8">সব এলাকা</text><rect x="731" y="294" width="75" height="20" rx="10" fill="#E8F7F1"/><text x="768" y="308" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">প্রকাশিত</text><text x="822" y="314" class="en" fill="#8794A1" font-size="7">01 Nov, 09:30</text><text x="909" y="315" class="bn" fill="#526579" font-size="8">অ্যাডমিন</text><text x="1030" y="315" class="bn" fill="#07825D" font-size="8" font-weight="700">সম্পাদনা</text><text x="1090" y="315" class="bn" fill="#CC5A5A" font-size="8" font-weight="700">মুছুন</text>
+    <text x="273" y="375" class="bn" fill="#172C40" font-size="9" font-weight="700">পরিকল্পিত কাজের সময়সূচি</text><text x="273" y="395" class="bn" fill="#8794A1" font-size="8">আগাম প্রস্তুতির জন্য গুরুত্বপূর্ণ তথ্য…</text><text x="596" y="385" class="bn" fill="#526579" font-size="8">ঢাকা উত্তর</text><rect x="731" y="364" width="75" height="20" rx="10" fill="#E8F7F1"/><text x="768" y="378" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">প্রকাশিত</text><text x="822" y="384" class="en" fill="#8794A1" font-size="7">30 Oct, 14:00</text><text x="909" y="385" class="bn" fill="#526579" font-size="8">অ্যাডমিন</text><text x="1030" y="385" class="bn" fill="#07825D" font-size="8" font-weight="700">সম্পাদনা</text><text x="1090" y="385" class="bn" fill="#CC5A5A" font-size="8" font-weight="700">মুছুন</text>
+    <text x="273" y="445" class="bn" fill="#172C40" font-size="9" font-weight="700">নিরাপদ ব্যবহারের পরামর্শ</text><text x="273" y="465" class="bn" fill="#8794A1" font-size="8">কর্তৃপক্ষের নিরাপত্তা নির্দেশনা…</text><text x="596" y="455" class="bn" fill="#526579" font-size="8">সব এলাকা</text><rect x="731" y="434" width="75" height="20" rx="10" fill="#F1F3F5"/><text x="768" y="448" class="bn" fill="#7B8793" font-size="8" font-weight="700" text-anchor="middle">খসড়া</text><text x="822" y="454" class="bn" fill="#8794A1" font-size="7">প্রকাশের তারিখ নেই</text><text x="909" y="455" class="bn" fill="#526579" font-size="8">অ্যাডমিন</text><text x="1030" y="455" class="bn" fill="#07825D" font-size="8" font-weight="700">সম্পাদনা</text><text x="1090" y="455" class="bn" fill="#CC5A5A" font-size="8" font-weight="700">মুছুন</text>
+    <text x="273" y="515" class="bn" fill="#172C40" font-size="9" font-weight="700">সেবা হালনাগাদের বিজ্ঞপ্তি</text><text x="273" y="535" class="bn" fill="#8794A1" font-size="8">সাম্প্রতিক এলাকার তথ্য…</text><text x="596" y="525" class="bn" fill="#526579" font-size="8">ঢাকা দক্ষিণ</text><rect x="731" y="504" width="75" height="20" rx="10" fill="#E8F7F1"/><text x="768" y="518" class="bn" fill="#07825D" font-size="8" font-weight="700" text-anchor="middle">প্রকাশিত</text><text x="822" y="524" class="en" fill="#8794A1" font-size="7">25 Oct, 11:15</text><text x="909" y="525" class="bn" fill="#526579" font-size="8">অ্যাডমিন</text><text x="1030" y="525" class="bn" fill="#07825D" font-size="8" font-weight="700">সম্পাদনা</text><text x="1090" y="525" class="bn" fill="#CC5A5A" font-size="8" font-weight="700">মুছুন</text>
+    <text x="270" y="609" class="bn" fill="#8190A0" font-size="9">১–৪ / ১২টি ঘোষণা</text><text x="1148" y="609" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="end">← ১  ২  ৩ →</text>
+  </g>
+
+  <g id="Admin-announcement-create" transform="translate(1280 4182)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">নতুন ঘোষণা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">একটি এলাকার জন্য বা পুরো পোর্টালে প্রকাশের জন্য নোটিশ লিখুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">ঘোষণার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="40" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="259" class="bn" fill="#9AA7B4" font-size="9">ঘোষণার শিরোনাম লিখুন</text>
+    <text x="280" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">পাঠকগোষ্ঠী</text>
+    <rect x="280" y="317" width="408" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="342" class="bn" fill="#718196" font-size="9">সব এলাকা</text>
+    <text x="716" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="317" width="424" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="342" class="bn" fill="#718196" font-size="9">খসড়া — এখনো পাবলিক নয়</text>
+    <text x="280" y="388" class="bn" fill="#33485D" font-size="9" font-weight="700">প্রকাশের সময়</text>
+    <rect x="280" y="398" width="860" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="423" class="en" fill="#718196" font-size="9">dd / mm / yyyy, --:--</text>
+    <text x="280" y="453" class="bn" fill="#8493A2" font-size="8">প্রকাশিত অবস্থা থাকলে সময় ফাঁকা রাখলে সঙ্গে সঙ্গে প্রকাশিত হবে।</text>
+    <text x="280" y="484" class="bn" fill="#33485D" font-size="9" font-weight="700">বার্তা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="494" width="860" height="100" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="519" class="bn" fill="#9AA7B4" font-size="9">সেবার ঘোষণা লিখুন…</text>
+    <rect x="280" y="611" width="151" height="38" rx="10" fill="#079B6A"/>
+    <text x="355" y="635" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">ঘোষণা সংরক্ষণ</text>
+    <rect x="442" y="611" width="103" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="493" y="635" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+  </g>
+
+  <g id="Admin-announcement-edit" transform="translate(2520 4182)">
+    <use href="#admin-shell"/>
+    <text x="268" y="113" class="bn" fill="#14283C" font-size="21" font-weight="800">ঘোষণা সম্পাদনা</text>
+    <text x="268" y="135" class="bn" fill="#718196" font-size="10">প্রকাশিত নোটিশ হালনাগাদ বা খসড়া হিসেবে সংরক্ষণ করুন।</text>
+    <rect x="252" y="158" width="916" height="489" rx="16" fill="#FFFFFF" stroke="#E1E7ED"/>
+    <text x="280" y="190" class="bn" fill="#172C40" font-size="12" font-weight="800">ঘোষণার বিবরণ</text>
+    <text x="280" y="224" class="bn" fill="#33485D" font-size="9" font-weight="700">শিরোনাম <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="234" width="860" height="40" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="259" class="bn" fill="#172C40" font-size="9">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <text x="280" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">পাঠকগোষ্ঠী</text>
+    <rect x="280" y="317" width="408" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="295" y="342" class="bn" fill="#172C40" font-size="9">সব এলাকা</text>
+    <text x="716" y="307" class="bn" fill="#33485D" font-size="9" font-weight="700">অবস্থা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="716" y="317" width="424" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/><text x="731" y="342" class="bn" fill="#172C40" font-size="9">প্রকাশিত</text>
+    <text x="280" y="388" class="bn" fill="#33485D" font-size="9" font-weight="700">প্রকাশের সময়</text>
+    <rect x="280" y="398" width="860" height="38" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="423" class="en" fill="#172C40" font-size="9">01 / 11 / 2026, 09:30 AM</text>
+    <text x="280" y="484" class="bn" fill="#33485D" font-size="9" font-weight="700">বার্তা <tspan fill="#D35B5B">*</tspan></text>
+    <rect x="280" y="494" width="860" height="100" rx="9" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="295" y="519" class="bn" fill="#526579" font-size="9">সম্মানিত গ্রাহক, বিদ্যুৎ সেবা সম্পর্কিত সর্বশেষ তথ্য পেতে</text>
+    <text x="295" y="540" class="bn" fill="#526579" font-size="9">আপনার এলাকার প্রকাশিত ঘোষণা ও সময়সূচি দেখুন।</text>
+    <rect x="280" y="611" width="151" height="38" rx="10" fill="#079B6A"/>
+    <text x="355" y="635" class="bn" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">পরিবর্তন সংরক্ষণ</text>
+    <rect x="442" y="611" width="103" height="38" rx="10" fill="#FFFFFF" stroke="#DCE4EC"/>
+    <text x="493" y="635" class="bn" fill="#526579" font-size="9" font-weight="700" text-anchor="middle">বাতিল</text>
+    <rect x="252" y="666" width="916" height="35" rx="9" fill="#E8F7F1"/>
+    <text x="270" y="688" class="bn" fill="#07825D" font-size="8">সফলভাবে সংরক্ষিত হলে পাবলিক নোটিশে আপডেটটি দেখা যাবে।</text>
+  </g>
+</svg>

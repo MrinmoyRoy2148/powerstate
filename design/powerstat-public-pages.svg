@@ -1,0 +1,434 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3760" height="2530" viewBox="0 0 3760 2530" fill="none">
+  <defs>
+    <linearGradient id="pub-hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081B35"/><stop offset="1" stop-color="#075044"/></linearGradient>
+    <filter id="pub-shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#21364A" flood-opacity=".10"/></filter>
+    <style>
+      .bn{font-family:"Noto Sans Bengali","Hind Siliguri",sans-serif}
+      .en{font-family:Inter,Arial,sans-serif}
+    </style>
+    <g id="public-header">
+      <rect width="1200" height="72" rx="20" fill="#FFFFFF"/>
+      <rect y="49" width="1200" height="23" fill="#FFFFFF"/>
+      <rect x="28" y="13" width="44" height="44" rx="14" fill="#079B6A"/>
+      <text x="50" y="43" class="en" fill="#FFFFFF" font-size="21" font-weight="800" text-anchor="middle">P</text>
+      <text x="84" y="34" class="en" fill="#10243A" font-size="16" font-weight="800">PowerStat <tspan fill="#079B6A">BD</tspan></text>
+      <text x="84" y="51" class="bn" fill="#718196" font-size="10">এলাকাভিত্তিক বিদ্যুৎ-সংক্রান্ত তথ্য</text>
+      <text x="430" y="42" class="bn" fill="#07825D" font-size="12" font-weight="700">হোম</text>
+      <text x="486" y="42" class="bn" fill="#52667A" font-size="12">এলাকা</text>
+      <text x="548" y="42" class="bn" fill="#52667A" font-size="12">সময়সূচি</text>
+      <text x="632" y="42" class="bn" fill="#52667A" font-size="12">বিভ্রাট</text>
+      <text x="701" y="42" class="bn" fill="#52667A" font-size="12">ইতিহাস</text>
+      <text x="768" y="42" class="bn" fill="#52667A" font-size="12">নোটিশ</text>
+      <rect x="1092" y="17" width="82" height="36" rx="11" fill="#FFFFFF" stroke="#D8E2EB"/>
+      <text x="1133" y="40" class="en" fill="#30465D" font-size="11" font-weight="700" text-anchor="middle">English</text>
+    </g>
+    <g id="public-footer">
+      <path d="M28 718H1172" stroke="#E3E9EF"/>
+      <text x="28" y="744" class="en" fill="#14283C" font-size="11" font-weight="800">PowerStat <tspan fill="#079B6A">BD</tspan></text>
+      <text x="1172" y="744" class="bn" fill="#7B8A99" font-size="10" text-anchor="end">পুনঃসংযোগের সময় অনুমাননির্ভর, নিশ্চয়তা নয়।</text>
+    </g>
+    <g id="section-title">
+      <text x="28" y="0" class="bn" fill="#13283D" font-size="25" font-weight="800"/>
+    </g>
+  </defs>
+  <rect width="3760" height="2530" fill="#E9EEF4"/>
+  <text x="40" y="35" class="en" fill="#526A7F" font-size="12" font-weight="800" letter-spacing="2">POWERSTAT BD  /  PUBLIC PRODUCT SCREENS  /  BANGLA-FIRST</text>
+  <text x="40" y="56" class="bn" fill="#8293A3" font-size="11">পাবলিক ওয়েবসাইটের সব প্রধান পৃষ্ঠা · নমুনা তথ্য ডেমো</text>
+
+  <g id="Public-homepage" transform="translate(40 82)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <rect x="28" y="91" width="1144" height="273" rx="24" fill="url(#pub-hero)"/>
+    <rect x="54" y="115" width="190" height="26" rx="13" fill="#0C4B49" stroke="#2B9D7D"/>
+    <text x="69" y="133" class="bn" fill="#A3F2D4" font-size="10" font-weight="700">এলাকার নির্ভরযোগ্য আপডেট</text>
+    <text x="54" y="194" class="bn" fill="#FFFFFF" font-size="34" font-weight="800">আপনার এলাকায় বিদ্যুতের খবর</text>
+    <text x="54" y="236" class="bn" fill="#FFFFFF" font-size="34" font-weight="800">জানুন সহজেই</text>
+    <text x="54" y="265" class="bn" fill="#C5D3DF" font-size="13">বিভ্রাট, সময়সূচি ও জরুরি নোটিশ—সব এক জায়গায়।</text>
+    <rect x="54" y="291" width="510" height="48" rx="13" fill="#FFFFFF"/>
+    <text x="74" y="321" class="bn" fill="#8292A2" font-size="12">আপনার এলাকা খুঁজুন, যেমন মিরপুর</text>
+    <rect x="453" y="297" width="101" height="36" rx="10" fill="#079B6A"/>
+    <text x="504" y="320" class="bn" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle">খুঁজুন</text>
+    <rect x="896" y="117" width="232" height="111" rx="17" fill="#FFFFFF" fill-opacity=".08" stroke="#FFFFFF" stroke-opacity=".16"/>
+    <text x="917" y="145" class="bn" fill="#C2D8DD" font-size="11">চলমান বিভ্রাট</text>
+    <text x="917" y="185" class="bn" fill="#FFFFFF" font-size="28" font-weight="800">০৩</text>
+    <text x="1032" y="145" class="bn" fill="#C2D8DD" font-size="11">সামনের সময়সূচি</text>
+    <text x="1032" y="185" class="bn" fill="#FFFFFF" font-size="28" font-weight="800">০৮</text>
+    <text x="28" y="404" class="bn" fill="#14283C" font-size="20" font-weight="800">এখনকার অবস্থা</text>
+    <text x="592" y="404" class="bn" fill="#07825D" font-size="11" font-weight="700">সব বিভ্রাট দেখুন →</text>
+    <text x="618" y="404" class="bn" fill="#14283C" font-size="20" font-weight="800">পরিকল্পিত সময়সূচি</text>
+    <rect x="28" y="419" width="550" height="102" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="47" y="438" width="38" height="38" rx="12" fill="#FFF2E8"/>
+    <text x="101" y="451" class="bn" fill="#172C40" font-size="13" font-weight="700">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="101" y="477" class="bn" fill="#728397" font-size="11">ঢাকা উত্তর · শুরু ১০:২৫ AM · সময় অনুমান</text>
+    <rect x="618" y="419" width="554" height="102" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="637" y="438" width="38" height="38" rx="12" fill="#EEF3FF"/>
+    <text x="691" y="451" class="bn" fill="#172C40" font-size="13" font-weight="700">ধানমন্ডি · নির্ধারিত রক্ষণাবেক্ষণ</text>
+    <text x="691" y="477" class="bn" fill="#728397" font-size="11">০৫ নভেম্বর · সকাল ৯টা – ১১টা</text>
+    <text x="28" y="565" class="bn" fill="#14283C" font-size="20" font-weight="800">সর্বশেষ নোটিশ</text>
+    <rect x="28" y="580" width="358" height="105" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="47" y="610" class="bn" fill="#07825D" font-size="10" font-weight="700">সব এলাকা · ০১ নভেম্বর</text>
+    <text x="47" y="638" class="bn" fill="#172C40" font-size="13" font-weight="700">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <text x="47" y="662" class="bn" fill="#728397" font-size="10">হালনাগাদ সেবাতথ্য দেখুন →</text>
+    <rect x="401" y="580" width="358" height="105" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="420" y="610" class="bn" fill="#07825D" font-size="10" font-weight="700">ঢাকা উত্তর · ৩০ অক্টোবর</text>
+    <text x="420" y="638" class="bn" fill="#172C40" font-size="13" font-weight="700">পরিকল্পিত কাজের সময়সূচি</text>
+    <text x="420" y="662" class="bn" fill="#728397" font-size="10">আগাম প্রস্তুতি নিন →</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-areas-list" transform="translate(1280 82)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="121" class="bn" fill="#13283D" font-size="27" font-weight="800">আপনার এলাকা খুঁজুন</text>
+    <text x="28" y="148" class="bn" fill="#718196" font-size="12">সক্রিয় সেবার এলাকাগুলো দেখুন, বিভ্রাট ও সময়সূচি জানতে একটি এলাকা বেছে নিন।</text>
+    <rect x="28" y="168" width="1144" height="62" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="54" y="205" class="bn" fill="#8493A2" font-size="12">এলাকার নাম দিয়ে খুঁজুন</text>
+    <rect x="1033" y="177" width="122" height="44" rx="12" fill="#079B6A"/>
+    <text x="1094" y="205" class="bn" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">খুঁজুন</text>
+    <text x="28" y="269" class="bn" fill="#172C40" font-size="13" font-weight="700">জনপ্রিয় এলাকা</text>
+    <text x="1172" y="269" class="bn" fill="#8190A0" font-size="11" text-anchor="end">২৪টি এলাকা</text>
+    <g>
+      <rect x="28" y="286" width="356" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="50" y="316" class="bn" fill="#07825D" font-size="10" font-weight="700">ঢাকা উত্তর</text>
+      <text x="50" y="349" class="bn" fill="#172C40" font-size="19" font-weight="800">মিরপুর</text>
+      <text x="50" y="376" class="bn" fill="#728397" font-size="11">মিরপুরের সব সেবাতথ্য ও সাম্প্রতিক আপডেট দেখুন।</text>
+      <text x="50" y="415" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+      <rect x="400" y="286" width="356" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="422" y="316" class="bn" fill="#07825D" font-size="10" font-weight="700">ঢাকা দক্ষিণ</text>
+      <text x="422" y="349" class="bn" fill="#172C40" font-size="19" font-weight="800">ধানমন্ডি</text>
+      <text x="422" y="376" class="bn" fill="#728397" font-size="11">এলাকার বিদ্যুৎ বিভ্রাট ও পরিকল্পনা দেখুন।</text>
+      <text x="422" y="415" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+      <rect x="772" y="286" width="400" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="794" y="316" class="bn" fill="#07825D" font-size="10" font-weight="700">চট্টগ্রাম</text>
+      <text x="794" y="349" class="bn" fill="#172C40" font-size="19" font-weight="800">আগ্রাবাদ</text>
+      <text x="794" y="376" class="bn" fill="#728397" font-size="11">সাম্প্রতিক ঘোষণা ও সেবার অবস্থা দেখুন।</text>
+      <text x="794" y="415" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+      <rect x="28" y="456" width="356" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="50" y="486" class="bn" fill="#07825D" font-size="10" font-weight="700">ঢাকা উত্তর</text>
+      <text x="50" y="519" class="bn" fill="#172C40" font-size="19" font-weight="800">উত্তরা</text>
+      <text x="50" y="546" class="bn" fill="#728397" font-size="11">পরিকল্পিত কাজ ও বর্তমান অবস্থা।</text>
+      <text x="50" y="585" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+      <rect x="400" y="456" width="356" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="422" y="486" class="bn" fill="#07825D" font-size="10" font-weight="700">রাজশাহী</text>
+      <text x="422" y="519" class="bn" fill="#172C40" font-size="19" font-weight="800">সাহেব বাজার</text>
+      <text x="422" y="546" class="bn" fill="#728397" font-size="11">সর্বশেষ প্রকাশিত সেবাতথ্য দেখুন।</text>
+      <text x="422" y="585" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+      <rect x="772" y="456" width="400" height="154" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <text x="794" y="486" class="bn" fill="#07825D" font-size="10" font-weight="700">খুলনা</text>
+      <text x="794" y="519" class="bn" fill="#172C40" font-size="19" font-weight="800">সোনাডাঙ্গা</text>
+      <text x="794" y="546" class="bn" fill="#728397" font-size="11">এলাকার সময়সূচি ও নোটিশ দেখুন।</text>
+      <text x="794" y="585" class="bn" fill="#07825D" font-size="11" font-weight="700">এলাকা দেখুন →</text>
+    </g>
+    <rect x="28" y="630" width="1144" height="48" rx="14" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="600" y="660" class="bn" fill="#07825D" font-size="11" font-weight="700" text-anchor="middle">← আগের পৃষ্ঠা     ১       ২       ৩       ৪       পরের পৃষ্ঠা →</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-area-detail" transform="translate(2520 82)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="105" class="bn" fill="#07825D" font-size="11" font-weight="700">← সব এলাকা</text>
+    <rect x="28" y="120" width="1144" height="116" rx="20" fill="url(#pub-hero)"/>
+    <text x="54" y="153" class="bn" fill="#A3F2D4" font-size="11">ঢাকা উত্তর</text>
+    <text x="54" y="193" class="bn" fill="#FFFFFF" font-size="29" font-weight="800">মিরপুর</text>
+    <text x="54" y="218" class="bn" fill="#C5D3DF" font-size="11">এলাকার সর্বশেষ বিদ্যুৎ আপডেট, পরিকল্পনা ও নোটিশ।</text>
+    <text x="28" y="275" class="bn" fill="#172C40" font-size="18" font-weight="800">চলমান বিভ্রাট</text>
+    <text x="562" y="275" class="bn" fill="#07825D" font-size="10" font-weight="700">সব বিভ্রাট →</text>
+    <text x="620" y="275" class="bn" fill="#172C40" font-size="18" font-weight="800">সামনের সময়সূচি</text>
+    <text x="1172" y="275" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="end">সব সময়সূচি →</text>
+    <rect x="28" y="292" width="550" height="134" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="48" y="312" width="40" height="40" rx="12" fill="#FFF2E8"/>
+    <text x="104" y="326" class="bn" fill="#172C40" font-size="13" font-weight="700">মিরপুর-১০ এলাকায় বিভ্রাট</text>
+    <text x="104" y="350" class="bn" fill="#728397" font-size="10">শুরু ১০:২৫ AM · অপ্রত্যাশিত</text>
+    <rect x="104" y="373" width="88" height="22" rx="11" fill="#FFF3E8"/>
+    <text x="148" y="388" class="bn" fill="#A95924" font-size="9" font-weight="700" text-anchor="middle">চলমান · ডেমো</text>
+    <text x="48" y="411" class="bn" fill="#8290A0" font-size="9">সম্ভাব্য পুনঃসংযোগ: ১২:৩০ PM · অনুমান</text>
+    <rect x="620" y="292" width="552" height="134" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="640" y="312" width="40" height="40" rx="12" fill="#EEF3FF"/>
+    <text x="696" y="326" class="bn" fill="#172C40" font-size="13" font-weight="700">মিরপুর-১২ · পরিকল্পিত কাজ</text>
+    <text x="696" y="350" class="bn" fill="#728397" font-size="10">০৫ নভেম্বর · সকাল ৯টা – ১১টা</text>
+    <text x="696" y="388" class="bn" fill="#6178BA" font-size="10" font-weight="700">প্রকাশিত · ডেমো</text>
+    <text x="640" y="411" class="bn" fill="#8290A0" font-size="9">স্থানীয় সময় · সময়সূচি পরিবর্তিত হতে পারে</text>
+    <text x="28" y="470" class="bn" fill="#172C40" font-size="18" font-weight="800">এলাকার নোটিশ</text>
+    <text x="1172" y="470" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="end">সব নোটিশ →</text>
+    <rect x="28" y="487" width="550" height="133" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="50" y="516" class="bn" fill="#07825D" font-size="10" font-weight="700">মিরপুর · ০১ নভেম্বর</text>
+    <text x="50" y="548" class="bn" fill="#172C40" font-size="14" font-weight="700">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <text x="50" y="575" class="bn" fill="#728397" font-size="10">সহায়তা পেতে হালনাগাদ তথ্য ও নির্দেশনা দেখুন।</text>
+    <rect x="620" y="487" width="552" height="133" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="642" y="516" class="bn" fill="#07825D" font-size="10" font-weight="700">সব এলাকা · ৩০ অক্টোবর</text>
+    <text x="642" y="548" class="bn" fill="#172C40" font-size="14" font-weight="700">পরিকল্পিত কাজের আপডেট</text>
+    <text x="642" y="575" class="bn" fill="#728397" font-size="10">সেবা সংক্রান্ত সর্বশেষ বার্তা পড়ুন।</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-schedules-list" transform="translate(40 902)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="120" class="bn" fill="#13283D" font-size="27" font-weight="800">লোডশেডিং সময়সূচি</text>
+    <text x="28" y="148" class="bn" fill="#718196" font-size="12">এলাকাভিত্তিক প্রকাশিত পরিকল্পনা · সময় স্থানীয় · পরিবর্তন হতে পারে</text>
+    <rect x="28" y="168" width="1144" height="82" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="48" y="191" class="bn" fill="#526579" font-size="10" font-weight="700">এলাকা</text>
+    <rect x="48" y="201" width="410" height="36" rx="10" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="62" y="224" class="bn" fill="#718196" font-size="11">সব এলাকা</text>
+    <text x="486" y="191" class="bn" fill="#526579" font-size="10" font-weight="700">তারিখ</text>
+    <rect x="486" y="201" width="410" height="36" rx="10" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="500" y="224" class="en" fill="#718196" font-size="11">05 / 11 / 2026</text>
+    <rect x="923" y="201" width="229" height="36" rx="10" fill="#079B6A"/>
+    <text x="1037" y="224" class="bn" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle">ফিল্টার প্রয়োগ করুন</text>
+    <text x="28" y="282" class="bn" fill="#172C40" font-size="14" font-weight="700">আসন্ন পরিকল্পনা</text>
+    <text x="1172" y="282" class="bn" fill="#8190A0" font-size="10" text-anchor="end">৮টি ফলাফল</text>
+    <g>
+      <rect x="28" y="300" width="356" height="291" rx="18" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="48" y="320" width="94" height="25" rx="12" fill="#E8F7F1"/>
+      <text x="95" y="337" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">ঢাকা উত্তর</text>
+      <rect x="278" y="320" width="82" height="25" rx="12" fill="#EEF3FF"/>
+      <text x="319" y="337" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">প্রকাশিত</text>
+      <text x="48" y="383" class="bn" fill="#172C40" font-size="16" font-weight="800">মিরপুর-১২ রক্ষণাবেক্ষণ</text>
+      <text x="48" y="418" class="bn" fill="#526579" font-size="12" font-weight="700">বৃহস্পতিবার, ০৫ নভেম্বর ২০২৬</text>
+      <text x="48" y="447" class="bn" fill="#718196" font-size="12">সকাল ৯:০০ – ১১:০০</text>
+      <path d="M48 471H364" stroke="#E8EDF2"/>
+      <text x="48" y="502" class="bn" fill="#718196" font-size="11">নির্ধারিত রক্ষণাবেক্ষণের জন্য সাময়িক</text>
+      <text x="48" y="524" class="bn" fill="#718196" font-size="11">বিদ্যুৎ সরবরাহ বন্ধ থাকতে পারে।</text>
+      <text x="48" y="564" class="bn" fill="#07825D" font-size="10" font-weight="700">এলাকার তথ্য দেখুন →</text>
+      <rect x="400" y="300" width="356" height="291" rx="18" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="420" y="320" width="94" height="25" rx="12" fill="#E8F7F1"/>
+      <text x="467" y="337" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">ঢাকা দক্ষিণ</text>
+      <rect x="650" y="320" width="82" height="25" rx="12" fill="#EEF3FF"/>
+      <text x="691" y="337" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">প্রকাশিত</text>
+      <text x="420" y="383" class="bn" fill="#172C40" font-size="16" font-weight="800">ধানমন্ডি লাইন কাজ</text>
+      <text x="420" y="418" class="bn" fill="#526579" font-size="12" font-weight="700">শুক্রবার, ০৬ নভেম্বর ২০২৬</text>
+      <text x="420" y="447" class="bn" fill="#718196" font-size="12">দুপুর ১:০০ – ৩:০০</text>
+      <path d="M420 471H736" stroke="#E8EDF2"/>
+      <text x="420" y="502" class="bn" fill="#718196" font-size="11">নিরাপদ রক্ষণাবেক্ষণ কার্যক্রমের</text>
+      <text x="420" y="524" class="bn" fill="#718196" font-size="11">জন্য পরিকল্পিত সেবা বিরতি।</text>
+      <text x="420" y="564" class="bn" fill="#07825D" font-size="10" font-weight="700">এলাকার তথ্য দেখুন →</text>
+      <rect x="772" y="300" width="400" height="291" rx="18" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="792" y="320" width="94" height="25" rx="12" fill="#E8F7F1"/>
+      <text x="839" y="337" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">চট্টগ্রাম</text>
+      <rect x="1066" y="320" width="82" height="25" rx="12" fill="#EEF3FF"/>
+      <text x="1107" y="337" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">প্রকাশিত</text>
+      <text x="792" y="383" class="bn" fill="#172C40" font-size="16" font-weight="800">আগ্রাবাদ ফিডার আপডেট</text>
+      <text x="792" y="418" class="bn" fill="#526579" font-size="12" font-weight="700">রবিবার, ০৮ নভেম্বর ২০২৬</text>
+      <text x="792" y="447" class="bn" fill="#718196" font-size="12">সকাল ১০:০০ – ১২:০০</text>
+      <path d="M792 471H1152" stroke="#E8EDF2"/>
+      <text x="792" y="502" class="bn" fill="#718196" font-size="11">পরিকল্পিত সরবরাহ বিরতি। সর্বশেষ</text>
+      <text x="792" y="524" class="bn" fill="#718196" font-size="11">পরিবর্তনের জন্য নোটিশ দেখুন।</text>
+      <text x="792" y="564" class="bn" fill="#07825D" font-size="10" font-weight="700">এলাকার তথ্য দেখুন →</text>
+    </g>
+    <text x="600" y="645" class="bn" fill="#07825D" font-size="11" font-weight="700" text-anchor="middle">← আগের পৃষ্ঠা     ১       ২       ৩       পরের পৃষ্ঠা →</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-current-outages" transform="translate(1280 902)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="120" class="bn" fill="#13283D" font-size="27" font-weight="800">চলমান বিদ্যুৎ বিভ্রাট</text>
+    <text x="28" y="148" class="bn" fill="#718196" font-size="12">কর্তৃপক্ষের প্রকাশিত সক্রিয় বিভ্রাট · পুনঃসংযোগের সময় অনুমাননির্ভর</text>
+    <rect x="28" y="168" width="1144" height="76" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="48" y="191" class="bn" fill="#526579" font-size="10" font-weight="700">এলাকা দিয়ে ফিল্টার</text>
+    <rect x="48" y="200" width="782" height="32" rx="9" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="62" y="221" class="bn" fill="#718196" font-size="11">সব এলাকা</text>
+    <rect x="848" y="200" width="134" height="32" rx="9" fill="#079B6A"/>
+    <text x="915" y="221" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">ফিল্টার</text>
+    <rect x="998" y="200" width="154" height="32" rx="9" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="1075" y="221" class="bn" fill="#526579" font-size="10" font-weight="700" text-anchor="middle">বিভ্রাটের ইতিহাস</text>
+    <g>
+      <rect x="28" y="263" width="1144" height="123" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="48" y="285" width="42" height="42" rx="13" fill="#FFF2E8"/>
+      <text x="108" y="289" class="bn" fill="#07825D" font-size="9" font-weight="700">ঢাকা উত্তর</text>
+      <text x="108" y="314" class="bn" fill="#172C40" font-size="15" font-weight="800">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+      <text x="108" y="340" class="bn" fill="#718196" font-size="10">লাইন ত্রুটি · শুরু ১০:২৫ AM · অপ্রত্যাশিত</text>
+      <text x="108" y="367" class="bn" fill="#526579" font-size="10">সম্ভাব্য পুনঃসংযোগ ১২:৩০ PM <tspan fill="#8997A5">(আনুমানিক)</tspan></text>
+      <rect x="1034" y="281" width="112" height="24" rx="12" fill="#FFF3E8"/>
+      <circle cx="1048" cy="293" r="3" fill="#D97B36"/>
+      <text x="1090" y="297" class="bn" fill="#A95924" font-size="9" font-weight="700" text-anchor="middle">চলমান · ডেমো</text>
+      <text x="1090" y="356" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">বিস্তারিত →</text>
+      <rect x="28" y="400" width="1144" height="123" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="48" y="422" width="42" height="42" rx="13" fill="#FFF2E8"/>
+      <text x="108" y="426" class="bn" fill="#07825D" font-size="9" font-weight="700">ঢাকা দক্ষিণ</text>
+      <text x="108" y="451" class="bn" fill="#172C40" font-size="15" font-weight="800">ধানমন্ডি ২৭ · সরবরাহ বিঘ্ন</text>
+      <text x="108" y="477" class="bn" fill="#718196" font-size="10">সাবস্টেশন কাজ · শুরু ১১:১০ AM · পরিকল্পিত</text>
+      <text x="108" y="504" class="bn" fill="#526579" font-size="10">সম্ভাব্য পুনঃসংযোগ ১:০০ PM <tspan fill="#8997A5">(আনুমানিক)</tspan></text>
+      <rect x="1034" y="418" width="112" height="24" rx="12" fill="#FFF3E8"/>
+      <circle cx="1048" cy="430" r="3" fill="#D97B36"/>
+      <text x="1090" y="434" class="bn" fill="#A95924" font-size="9" font-weight="700" text-anchor="middle">চলমান · ডেমো</text>
+      <text x="1090" y="493" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">বিস্তারিত →</text>
+      <rect x="28" y="537" width="1144" height="98" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+      <rect x="48" y="558" width="42" height="42" rx="13" fill="#FFF2E8"/>
+      <text x="108" y="563" class="bn" fill="#07825D" font-size="9" font-weight="700">চট্টগ্রাম</text>
+      <text x="108" y="588" class="bn" fill="#172C40" font-size="15" font-weight="800">আগ্রাবাদ ফিডার · জরুরি মেরামত</text>
+      <text x="108" y="615" class="bn" fill="#718196" font-size="10">শুরু ১১:৪৫ AM · পুনঃসংযোগের সময় জানানো হয়নি</text>
+      <text x="1090" y="592" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">বিস্তারিত →</text>
+    </g>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-outage-history" transform="translate(2520 902)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="120" class="bn" fill="#13283D" font-size="27" font-weight="800">বিভ্রাটের ইতিহাস</text>
+    <text x="28" y="148" class="bn" fill="#718196" font-size="12">পূর্বের বিভ্রাট ও পুনঃসংযোগের সময় রেফারেন্স হিসেবে দেখুন।</text>
+    <rect x="28" y="168" width="1144" height="90" rx="16" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <text x="48" y="190" class="bn" fill="#526579" font-size="9" font-weight="700">এলাকা</text>
+    <text x="336" y="190" class="bn" fill="#526579" font-size="9" font-weight="700">ধরন</text>
+    <text x="624" y="190" class="bn" fill="#526579" font-size="9" font-weight="700">শুরুর তারিখ</text>
+    <rect x="48" y="199" width="266" height="37" rx="9" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="62" y="223" class="bn" fill="#718196" font-size="10">সব এলাকা</text>
+    <rect x="336" y="199" width="266" height="37" rx="9" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="350" y="223" class="bn" fill="#718196" font-size="10">সব ধরন</text>
+    <rect x="624" y="199" width="266" height="37" rx="9" fill="#FFFFFF" stroke="#D9E1E9"/>
+    <text x="638" y="223" class="en" fill="#718196" font-size="10">01 / 10 / 2026</text>
+    <rect x="912" y="199" width="236" height="37" rx="9" fill="#079B6A"/>
+    <text x="1030" y="223" class="bn" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">ফিল্টার প্রয়োগ করুন</text>
+    <rect x="28" y="278" width="1144" height="352" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="28" y="278" width="1144" height="43" rx="17" fill="#F4F7FA"/>
+    <text x="48" y="305" class="bn" fill="#718196" font-size="9" font-weight="700">বিভ্রাট</text>
+    <text x="450" y="305" class="bn" fill="#718196" font-size="9" font-weight="700">এলাকা / কারণ</text>
+    <text x="733" y="305" class="bn" fill="#718196" font-size="9" font-weight="700">শুরু</text>
+    <text x="903" y="305" class="bn" fill="#718196" font-size="9" font-weight="700">পুনঃসংযোগ</text>
+    <text x="1076" y="305" class="bn" fill="#718196" font-size="9" font-weight="700">অবস্থা</text>
+    <path d="M28 321H1172M28 386H1172M28 451H1172M28 516H1172M28 581H1172" stroke="#E9EEF3"/>
+    <text x="48" y="351" class="bn" fill="#172C40" font-size="11" font-weight="700">মিরপুর-১০ লাইন ত্রুটি</text>
+    <text x="48" y="371" class="bn" fill="#07825D" font-size="9">বিস্তারিত দেখুন →</text>
+    <text x="450" y="351" class="bn" fill="#526579" font-size="10">মিরপুর · লাইন ত্রুটি</text>
+    <text x="733" y="351" class="en" fill="#526579" font-size="10">30 Oct, 10:25</text>
+    <text x="903" y="351" class="en" fill="#526579" font-size="10">30 Oct, 12:14</text>
+    <rect x="1062" y="336" width="86" height="22" rx="11" fill="#E8F7F1"/>
+    <text x="1105" y="351" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text>
+    <text x="48" y="416" class="bn" fill="#172C40" font-size="11" font-weight="700">ধানমন্ডি সাবস্টেশন কাজ</text>
+    <text x="48" y="436" class="bn" fill="#07825D" font-size="9">বিস্তারিত দেখুন →</text>
+    <text x="450" y="416" class="bn" fill="#526579" font-size="10">ধানমন্ডি · পরিকল্পিত</text>
+    <text x="733" y="416" class="en" fill="#526579" font-size="10">28 Oct, 09:00</text>
+    <text x="903" y="416" class="en" fill="#526579" font-size="10">28 Oct, 10:46</text>
+    <rect x="1062" y="401" width="86" height="22" rx="11" fill="#E8F7F1"/>
+    <text x="1105" y="416" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text>
+    <text x="48" y="481" class="bn" fill="#172C40" font-size="11" font-weight="700">আগ্রাবাদ ফিডার সমস্যা</text>
+    <text x="48" y="501" class="bn" fill="#07825D" font-size="9">বিস্তারিত দেখুন →</text>
+    <text x="450" y="481" class="bn" fill="#526579" font-size="10">আগ্রাবাদ · যান্ত্রিক ত্রুটি</text>
+    <text x="733" y="481" class="en" fill="#526579" font-size="10">24 Oct, 15:10</text>
+    <text x="903" y="481" class="en" fill="#526579" font-size="10">24 Oct, 18:02</text>
+    <rect x="1062" y="466" width="86" height="22" rx="11" fill="#E8F7F1"/>
+    <text x="1105" y="481" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text>
+    <text x="48" y="546" class="bn" fill="#172C40" font-size="11" font-weight="700">উত্তরা বিদ্যুৎ লাইন</text>
+    <text x="48" y="566" class="bn" fill="#07825D" font-size="9">বিস্তারিত দেখুন →</text>
+    <text x="450" y="546" class="bn" fill="#526579" font-size="10">উত্তরা · আবহাওয়াজনিত</text>
+    <text x="733" y="546" class="en" fill="#526579" font-size="10">21 Oct, 07:45</text>
+    <text x="903" y="546" class="en" fill="#526579" font-size="10">21 Oct, 09:18</text>
+    <rect x="1062" y="531" width="86" height="22" rx="11" fill="#E8F7F1"/>
+    <text x="1105" y="546" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">পুনঃসংযুক্ত</text>
+    <text x="600" y="609" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">← আগের পৃষ্ঠা     ১       ২       ৩       পরের পৃষ্ঠা →</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-outage-detail" transform="translate(40 1722)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="105" class="bn" fill="#07825D" font-size="11" font-weight="700">← বিভ্রাটের তালিকায় ফিরুন</text>
+    <rect x="28" y="122" width="1144" height="526" rx="21" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <path d="M28 143Q28 122 49 122H1151Q1172 122 1172 143V268H28V143Z" fill="#091B30"/>
+    <rect x="56" y="148" width="89" height="24" rx="12" fill="#3D2D1F"/>
+    <circle cx="70" cy="160" r="3" fill="#FDB166"/>
+    <text x="104" y="164" class="bn" fill="#FFD29D" font-size="9" font-weight="700" text-anchor="middle">চলমান</text>
+    <rect x="153" y="148" width="108" height="24" rx="12" fill="#20334D"/>
+    <text x="207" y="164" class="bn" fill="#BBD0E6" font-size="9" font-weight="700" text-anchor="middle">অপ্রত্যাশিত</text>
+    <text x="56" y="211" class="bn" fill="#FFFFFF" font-size="27" font-weight="800">মিরপুর-১০ এলাকায় বিদ্যুৎ বিভ্রাট</text>
+    <text x="56" y="240" class="bn" fill="#C5D3DF" font-size="12">ঢাকা উত্তর · সর্বশেষ আপডেট ০১ নভেম্বর, ১১:২৫ AM</text>
+    <text x="58" y="309" class="bn" fill="#8190A0" font-size="10" font-weight="700">কারণ</text>
+    <text x="58" y="334" class="bn" fill="#172C40" font-size="13" font-weight="700">বিদ্যুৎ লাইনে ত্রুটি</text>
+    <text x="356" y="309" class="bn" fill="#8190A0" font-size="10" font-weight="700">শুরু হয়েছে</text>
+    <text x="356" y="334" class="bn" fill="#172C40" font-size="13" font-weight="700">০১ নভেম্বর, ১০:২৫ AM</text>
+    <text x="654" y="309" class="bn" fill="#8190A0" font-size="10" font-weight="700">সম্ভাব্য পুনঃসংযোগ</text>
+    <text x="654" y="334" class="bn" fill="#172C40" font-size="13" font-weight="700">০১ নভেম্বর, ১২:৩০ PM</text>
+    <rect x="942" y="294" width="201" height="58" rx="13" fill="#FFF6E9"/>
+    <text x="1042" y="317" class="bn" fill="#A86B18" font-size="10" font-weight="700" text-anchor="middle">সময়টি আনুমানিক</text>
+    <text x="1042" y="337" class="bn" fill="#8C774F" font-size="9" text-anchor="middle">পরিবর্তিত হতে পারে</text>
+    <path d="M56 374H1144" stroke="#E8EDF2"/>
+    <text x="58" y="411" class="bn" fill="#8190A0" font-size="10" font-weight="700">বিস্তারিত</text>
+    <text x="58" y="442" class="bn" fill="#526579" font-size="12">কারিগরি দল বিষয়টি পর্যালোচনা করছে। নিরাপদে থাকতে বিদ্যুৎ লাইনের কাছে যাবেন না।</text>
+    <text x="58" y="467" class="bn" fill="#526579" font-size="12">পরিস্থিতির পরিবর্তন হলে এই পৃষ্ঠায় সর্বশেষ তথ্য প্রকাশ করা হবে।</text>
+    <rect x="58" y="512" width="1084" height="91" rx="14" fill="#F4F7FA"/>
+    <text x="80" y="542" class="bn" fill="#526579" font-size="11" font-weight="700">পরবর্তী আপডেট</text>
+    <text x="80" y="570" class="bn" fill="#718196" font-size="10">কর্তৃপক্ষের সর্বশেষ প্রকাশিত তথ্য দেখুন। পুনঃসংযোগের সময় কোনো নিশ্চয়তা নয়।</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-announcements-list" transform="translate(1280 1722)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="120" class="bn" fill="#13283D" font-size="27" font-weight="800">সর্বশেষ নোটিশ</text>
+    <text x="28" y="148" class="bn" fill="#718196" font-size="12">বিদ্যুৎ সেবা, রক্ষণাবেক্ষণ ও গুরুত্বপূর্ণ ঘোষণার হালনাগাদ তথ্য।</text>
+    <rect x="28" y="173" width="356" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="48" y="193" width="76" height="23" rx="11" fill="#E8F7F1"/>
+    <text x="86" y="209" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">সব এলাকা</text>
+    <text x="346" y="209" class="bn" fill="#8290A0" font-size="9" text-anchor="end">০১ নভেম্বর</text>
+    <text x="48" y="250" class="bn" fill="#172C40" font-size="15" font-weight="800">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <text x="48" y="280" class="bn" fill="#718196" font-size="10">সেবা ও সহায়তা পেতে সর্বশেষ হালনাগাদ</text>
+    <text x="48" y="300" class="bn" fill="#718196" font-size="10">তথ্য এবং নির্দেশনা দেখুন।</text>
+    <text x="48" y="334" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <rect x="400" y="173" width="356" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="420" y="193" width="82" height="23" rx="11" fill="#EEF3FF"/>
+    <text x="461" y="209" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">ঢাকা উত্তর</text>
+    <text x="718" y="209" class="bn" fill="#8290A0" font-size="9" text-anchor="end">৩০ অক্টোবর</text>
+    <text x="420" y="250" class="bn" fill="#172C40" font-size="15" font-weight="800">পরিকল্পিত কাজের সময়সূচি</text>
+    <text x="420" y="280" class="bn" fill="#718196" font-size="10">মিরপুর অঞ্চলের বাসিন্দাদের আগাম</text>
+    <text x="420" y="300" class="bn" fill="#718196" font-size="10">প্রস্তুতির জন্য গুরুত্বপূর্ণ তথ্য।</text>
+    <text x="420" y="334" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <rect x="772" y="173" width="400" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="792" y="193" width="76" height="23" rx="11" fill="#FFF5E7"/>
+    <text x="830" y="209" class="bn" fill="#A46B16" font-size="9" font-weight="700" text-anchor="middle">সেবার খবর</text>
+    <text x="1148" y="209" class="bn" fill="#8290A0" font-size="9" text-anchor="end">২৮ অক্টোবর</text>
+    <text x="792" y="250" class="bn" fill="#172C40" font-size="15" font-weight="800">নিরাপদ বিদ্যুৎ ব্যবহারের পরামর্শ</text>
+    <text x="792" y="280" class="bn" fill="#718196" font-size="10">নিরাপদে থাকতে কর্তৃপক্ষের নির্দেশনা</text>
+    <text x="792" y="300" class="bn" fill="#718196" font-size="10">অনুসরণ করুন এবং সতর্ক থাকুন।</text>
+    <text x="792" y="334" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <rect x="28" y="372" width="356" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="48" y="392" width="82" height="23" rx="11" fill="#EEF3FF"/>
+    <text x="89" y="408" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">ঢাকা দক্ষিণ</text>
+    <text x="346" y="408" class="bn" fill="#8290A0" font-size="9" text-anchor="end">২৫ অক্টোবর</text>
+    <text x="48" y="449" class="bn" fill="#172C40" font-size="15" font-weight="800">সেবা হালনাগাদের বিজ্ঞপ্তি</text>
+    <text x="48" y="479" class="bn" fill="#718196" font-size="10">সাম্প্রতিক এলাকার তথ্য ও সময়সূচি</text>
+    <text x="48" y="499" class="bn" fill="#718196" font-size="10">পরিবর্তনের জন্য এই ঘোষণা দেখুন।</text>
+    <text x="48" y="533" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <rect x="400" y="372" width="356" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="420" y="392" width="76" height="23" rx="11" fill="#E8F7F1"/>
+    <text x="458" y="408" class="bn" fill="#07825D" font-size="9" font-weight="700" text-anchor="middle">সব এলাকা</text>
+    <text x="718" y="408" class="bn" fill="#8290A0" font-size="9" text-anchor="end">২২ অক্টোবর</text>
+    <text x="420" y="449" class="bn" fill="#172C40" font-size="15" font-weight="800">গ্রাহকদের জন্য জরুরি তথ্য</text>
+    <text x="420" y="479" class="bn" fill="#718196" font-size="10">জরুরি সেবা-সংক্রান্ত নির্দেশনা</text>
+    <text x="420" y="499" class="bn" fill="#718196" font-size="10">মনোযোগ দিয়ে পড়ে নিন।</text>
+    <text x="420" y="533" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <rect x="772" y="372" width="400" height="180" rx="17" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="792" y="392" width="82" height="23" rx="11" fill="#EEF3FF"/>
+    <text x="833" y="408" class="bn" fill="#4669B5" font-size="9" font-weight="700" text-anchor="middle">রাজশাহী</text>
+    <text x="1148" y="408" class="bn" fill="#8290A0" font-size="9" text-anchor="end">১৮ অক্টোবর</text>
+    <text x="792" y="449" class="bn" fill="#172C40" font-size="15" font-weight="800">পরিকল্পিত রক্ষণাবেক্ষণ</text>
+    <text x="792" y="479" class="bn" fill="#718196" font-size="10">স্থানীয় বিদ্যুৎ সেবা-সংক্রান্ত</text>
+    <text x="792" y="499" class="bn" fill="#718196" font-size="10">হালনাগাদ বিজ্ঞপ্তি।</text>
+    <text x="792" y="533" class="bn" fill="#07825D" font-size="10" font-weight="700">নোটিশ পড়ুন →</text>
+    <text x="600" y="619" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">← আগের পৃষ্ঠা     ১       ২       ৩       পরের পৃষ্ঠা →</text>
+    <use href="#public-footer"/>
+  </g>
+
+  <g id="Public-announcement-detail" transform="translate(2520 1722)">
+    <rect width="1200" height="760" rx="22" fill="#F7F9FC" filter="url(#pub-shadow)"/>
+    <use href="#public-header"/>
+    <text x="28" y="105" class="bn" fill="#07825D" font-size="11" font-weight="700">← সব নোটিশ</text>
+    <rect x="152" y="132" width="896" height="525" rx="22" fill="#FFFFFF" stroke="#E0E7EE"/>
+    <rect x="190" y="170" width="83" height="25" rx="12" fill="#E8F7F1"/>
+    <text x="231" y="187" class="bn" fill="#07825D" font-size="10" font-weight="700" text-anchor="middle">সব এলাকা</text>
+    <text x="294" y="187" class="bn" fill="#8290A0" font-size="10">০১ নভেম্বর ২০২৬ · ৯:৩০ AM</text>
+    <text x="190" y="250" class="bn" fill="#172C40" font-size="27" font-weight="800">গ্রাহকসেবা সংক্রান্ত ঘোষণা</text>
+    <path d="M190 278H1010" stroke="#E8EDF2"/>
+    <text x="190" y="321" class="bn" fill="#526579" font-size="13">সম্মানিত গ্রাহক, বিদ্যুৎ সেবা সম্পর্কিত সর্বশেষ তথ্য এবং সহায়তা পেতে</text>
+    <text x="190" y="351" class="bn" fill="#526579" font-size="13">অনুগ্রহ করে আপনার এলাকার প্রকাশিত ঘোষণা ও সময়সূচি দেখুন।</text>
+    <text x="190" y="381" class="bn" fill="#526579" font-size="13">পরিকল্পিত রক্ষণাবেক্ষণ বা জরুরি অবস্থার তথ্য হালনাগাদ হলে এই পৃষ্ঠায়</text>
+    <text x="190" y="411" class="bn" fill="#526579" font-size="13">প্রকাশ করা হবে। পুনঃসংযোগের সময় পরিস্থিতি অনুযায়ী পরিবর্তিত হতে পারে।</text>
+    <rect x="190" y="454" width="820" height="105" rx="15" fill="#F4F8F6"/>
+    <text x="215" y="485" class="bn" fill="#07825D" font-size="12" font-weight="700">গুরুত্বপূর্ণ তথ্য</text>
+    <text x="215" y="514" class="bn" fill="#526579" font-size="11">এখানে প্রকাশিত তথ্য সেবাসংক্রান্ত নির্দেশনা। জরুরি পরিস্থিতিতে স্থানীয়</text>
+    <text x="215" y="536" class="bn" fill="#526579" font-size="11">কর্তৃপক্ষের নির্দেশনা অনুসরণ করুন।</text>
+    <text x="190" y="607" class="bn" fill="#8290A0" font-size="10">PowerStat BD · কমিউনিটি তথ্যসেবা</text>
+    <use href="#public-footer"/>
+  </g>
+</svg>
