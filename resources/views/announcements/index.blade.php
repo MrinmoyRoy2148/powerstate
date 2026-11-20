@@ -16,7 +16,10 @@
                 <span class="mt-5 inline-flex text-sm font-bold text-emerald-700">{{ __('Read notice') }} →</span>
             </a>
         @empty
-            <p class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-sm text-slate-600 md:col-span-2 lg:col-span-3">{{ __('No announcements are currently published.') }}</p>
+            <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-sm text-slate-600 md:col-span-2 lg:col-span-3">
+                <p class="font-bold">{{ __('No announcements are currently published.') }}</p>
+                <p class="mt-2">{{ __('Check back later for notices and maintenance updates.') }}</p>
+            </div>
         @endforelse
     </div>
     <div class="mt-6">{{ $announcements->links() }}</div>

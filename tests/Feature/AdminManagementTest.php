@@ -116,8 +116,11 @@ class AdminManagementTest extends TestCase
                 'scheduled_date' => '2030-01-02',
                 'start_time' => '19:00',
                 'end_time' => '20:00',
-                'status' => 'published',
+                'status' => 'draft',
             ])
+            ->assertRedirectToRoute('admin.schedules.index');
+        $this->actingAs($admin)
+            ->patch(route('admin.schedules.publish', $schedule))
             ->assertRedirectToRoute('admin.schedules.index');
         $this->assertDatabaseHas('load_shedding_schedules', [
             'id' => $schedule->id,
@@ -223,21 +226,21 @@ class AdminManagementTest extends TestCase
         $otherZone = Zone::create(['name' => 'Chattogram', 'slug' => 'chattogram']);
         $selectedZone->schedules()->create([
             'title' => 'Matching schedule',
-            'scheduled_date' => '2026-11-10',
+            'scheduled_date' => '2030-11-10',
             'start_time' => '18:00',
             'end_time' => '19:00',
             'status' => 'published',
         ]);
         $selectedZone->schedules()->create([
             'title' => 'Draft schedule',
-            'scheduled_date' => '2026-11-10',
+            'scheduled_date' => '2030-11-10',
             'start_time' => '19:00',
             'end_time' => '20:00',
             'status' => 'draft',
         ]);
         $otherZone->schedules()->create([
             'title' => 'Other area schedule',
-            'scheduled_date' => '2026-11-10',
+            'scheduled_date' => '2030-11-10',
             'start_time' => '18:00',
             'end_time' => '19:00',
             'status' => 'published',
@@ -248,7 +251,7 @@ class AdminManagementTest extends TestCase
             ->get(route('admin.schedules.index', [
                 'period' => 'upcoming',
                 'zone_id' => $selectedZone->id,
-                'scheduled_date' => '2026-11-10',
+                'scheduled_date' => '2030-11-10',
                 'status' => 'published',
             ]))
             ->assertOk()
@@ -295,14 +298,14 @@ class AdminManagementTest extends TestCase
         $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
         $scheduleToPublish = $zone->schedules()->create([
             'title' => 'Draft schedule',
-            'scheduled_date' => '2026-11-10',
+            'scheduled_date' => '2030-11-10',
             'start_time' => '18:00',
             'end_time' => '19:00',
             'status' => 'draft',
         ]);
         $scheduleToCancel = $zone->schedules()->create([
             'title' => 'Published schedule',
-            'scheduled_date' => '2026-11-11',
+            'scheduled_date' => '2030-11-11',
             'start_time' => '18:00',
             'end_time' => '19:00',
             'status' => 'published',
@@ -727,6 +730,76 @@ class AdminManagementTest extends TestCase
             'id' => $outage->id,
             'status' => 'restored',
             'restored_at' => '2026-10-12 12:00:00',
+        ]);
+    }
+
+    public function test_past_schedule_cannot_be_published(): void
+    {
+        $admin = User::factory()->create();
+        $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
+        $schedule = $zone->schedules()->create([
+            'title' => 'Past schedule',
+            'scheduled_date' => now()->subDay()->toDateString(),
+            'start_time' => '08:00',
+            'end_time' => '09:00',
+            'status' => 'draft',
+        ]);
+
+        $this->actingAs($admin)
+            ->from(route('admin.schedules.index'))
+            ->patch(route('admin.schedules.publish', $schedule))
+            ->assertRedirectToRoute('admin.schedules.index')
+            ->assertSessionHasErrors('scheduled_date');
+
+        $this->assertDatabaseHas('load_shedding_schedules', [
+            'id' => $schedule->id,
+            'status' => 'draft',
+        ]);
+    }
+
+    public function test_expired_announcement_cannot_be_republished(): void
+    {
+        $admin = User::factory()->create();
+        $announcement = $admin->announcementsCreated()->create([
+            'title' => 'Expired notice',
+            'body' => 'Old notice',
+            'status' => 'draft',
+            'published_at' => now()->subDays(2),
+            'expires_at' => now()->subDay(),
+        ]);
+
+        $this->actingAs($admin)
+            ->from(route('admin.announcements.index'))
+            ->patch(route('admin.announcements.publish', $announcement))
+            ->assertRedirectToRoute('admin.announcements.index')
+            ->assertSessionHasErrors('expires_at');
+
+        $this->assertDatabaseHas('announcements', [
+            'id' => $announcement->id,
+            'status' => 'draft',
+        ]);
+    }
+
+    public function test_only_active_outages_can_be_restored(): void
+    {
+        $admin = User::factory()->create();
+        $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
+        $outage = $zone->outages()->create([
+            'title' => 'Restored interruption',
+            'outage_type' => 'unexpected',
+            'started_at' => now()->subHour(),
+            'status' => 'restored',
+            'restored_at' => now(),
+        ]);
+
+        $this->actingAs($admin)
+            ->from(route('admin.outages.show', $outage))
+            ->patch(route('admin.outages.restore', $outage))
+            ->assertSessionHasErrors('outage');
+
+        $this->assertDatabaseHas('outages', [
+            'id' => $outage->id,
+            'status' => 'restored',
         ]);
     }
 

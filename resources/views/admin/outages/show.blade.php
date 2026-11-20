@@ -6,7 +6,8 @@
         <div class="d-flex flex-wrap gap-2">
             <a href="{{ route('admin.outages.edit', $outage) }}" class="btn btn-outline-primary">{{ __('Edit outage') }}</a>
             @if ($outage->status === 'active')
-                <form method="POST" action="{{ route('admin.outages.restore', $outage) }}" onsubmit="return confirm(@js(__('Mark this outage as restored now?')))">@csrf @method('PATCH')<button class="btn btn-success" type="submit">{{ __('Mark restored') }}</button></form>
+                <form method="POST" action="{{ route('admin.outages.restore', $outage) }}">@csrf @method('PATCH')<button class="btn btn-success" type="submit" data-confirm="{{ __('Mark this outage as restored now?') }}" data-confirm-label="{{ __('Mark restored') }}">{{ __('Mark restored') }}</button></form>
+                <form method="POST" action="{{ route('admin.outages.cancel', $outage) }}">@csrf @method('PATCH')<button class="btn btn-outline-danger" type="submit" data-confirm="{{ __('Cancel this outage?') }}" data-confirm-label="{{ __('Cancel') }}">{{ __('Cancel outage') }}</button></form>
             @endif
         </div>
     </div>

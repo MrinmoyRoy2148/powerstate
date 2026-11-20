@@ -43,7 +43,6 @@
             </form>
         </section>
         <a href="{{ route('home') }}" class="mt-5 block text-center text-sm font-semibold text-slate-300 hover:text-white">{{ __('← Return to public site') }}</a>
-        <a href="{{ route('login') }}" class="mt-3 block text-center text-sm font-semibold text-slate-300 hover:text-white">{{ __('Looking for user sign in?') }}</a>
     </main>
 </body>
 </html>

@@ -132,6 +132,19 @@ class OutageController extends Controller
         return redirect()->route('admin.outages.show', $outage)->with('success', __('Outage marked as restored.'));
     }
 
+    public function cancel(Outage $outage): RedirectResponse
+    {
+        if ($outage->status !== 'active') {
+            return back()->withErrors(['outage' => __('Only active outages can be cancelled.')]);
+        }
+
+        $outage->forceFill([
+            'status' => 'cancelled',
+        ])->save();
+
+        return redirect()->route('admin.outages.index')->with('success', __('Outage cancelled successfully.'));
+    }
+
     /**
      * @return array<string, mixed>
      */
@@ -151,7 +164,7 @@ class OutageController extends Controller
     {
         $statusRules = $outage?->status === 'restored'
             ? ['sometimes', Rule::in(['restored'])]
-            : ['required', Rule::in(['active', 'cancelled'])];
+            : ['required', Rule::in(['active'])];
 
         return $request->validate([
             'zone_id' => ['required', 'integer', Rule::exists('zones', 'id')->where('is_active', true)],

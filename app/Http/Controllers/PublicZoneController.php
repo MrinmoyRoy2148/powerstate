@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use App\Models\Zone;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -52,5 +53,30 @@ class PublicZoneController extends Controller
             ->get();
 
         return view('zones.show', compact('zone', 'announcements'));
+    }
+
+    public function saved(Request $request): View
+    {
+        $zones = $request->user()->savedZones()
+            ->where('is_active', true)
+            ->orderBy('name')
+            ->paginate(12);
+
+        return view('zones.saved', compact('zones'));
+    }
+
+    public function save(Request $request, Zone $zone): RedirectResponse
+    {
+        abort_unless($zone->is_active, 404);
+        $request->user()->savedZones()->syncWithoutDetaching([$zone->id]);
+
+        return back()->with('success', __('Area saved.'));
+    }
+
+    public function unsave(Request $request, Zone $zone): RedirectResponse
+    {
+        $request->user()->savedZones()->detach($zone->id);
+
+        return back()->with('success', __('Area removed from saved areas.'));
     }
 }
