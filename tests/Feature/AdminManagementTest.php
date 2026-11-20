@@ -327,6 +327,44 @@ class AdminManagementTest extends TestCase
         ]);
     }
 
+    public function test_admin_can_publish_a_schedule_for_today_but_not_for_a_past_day(): void
+    {
+        $this->travelTo('2026-11-20 11:00:00');
+        $admin = User::factory()->create();
+        $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
+        $todaySchedule = $zone->schedules()->create([
+            'title' => 'Today schedule',
+            'scheduled_date' => '2026-11-20',
+            'start_time' => '18:00',
+            'end_time' => '19:00',
+            'status' => 'draft',
+        ]);
+        $pastSchedule = $zone->schedules()->create([
+            'title' => 'Past schedule',
+            'scheduled_date' => '2026-11-19',
+            'start_time' => '18:00',
+            'end_time' => '19:00',
+            'status' => 'draft',
+        ]);
+
+        $this->actingAs($admin)
+            ->patch(route('admin.schedules.publish', $todaySchedule))
+            ->assertRedirectToRoute('admin.schedules.index');
+        $this->assertDatabaseHas('load_shedding_schedules', [
+            'id' => $todaySchedule->id,
+            'status' => 'published',
+        ]);
+
+        $this->from(route('admin.schedules.index'))
+            ->patch(route('admin.schedules.publish', $pastSchedule))
+            ->assertRedirectToRoute('admin.schedules.index')
+            ->assertSessionHasErrors('scheduled_date');
+        $this->assertDatabaseHas('load_shedding_schedules', [
+            'id' => $pastSchedule->id,
+            'status' => 'draft',
+        ]);
+    }
+
     public function test_admin_can_filter_outages_by_zone_status_and_start_date(): void
     {
         $admin = User::factory()->create();

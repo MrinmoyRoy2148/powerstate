@@ -3,7 +3,7 @@
 @section('title', __('Announcements'))
 
 @section('content')
-    <div class="mb-6"><h1 class="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">{{ __('Announcements') }}</h1><p class="mt-2 max-w-2xl text-sm text-slate-600">{{ __('Published service notices and maintenance updates from Power Authority staff.') }}</p></div>
+    <div class="mb-6"><h1 class="text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">{{ __('Announcements') }}</h1><p class="mt-2 max-w-2xl text-sm text-slate-600">{{ __('Notices and maintenance updates posted on this site.') }}</p></div>
     <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         @forelse ($announcements as $announcement)
             <a href="{{ route('announcements.show', $announcement) }}" class="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md">

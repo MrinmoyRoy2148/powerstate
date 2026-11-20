@@ -7,62 +7,71 @@
     <title>@yield('title', __('Admin')) | PowerStat BD</title>
     @vite(['resources/css/app.css', 'resources/css/admin.css', 'resources/js/app.js'])
 </head>
-<body class="min-vh-100 bg-body-tertiary text-dark">
-    <header class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a href="{{ route('admin.dashboard') }}" class="navbar-brand fw-bold">
-                PowerStat <span class="text-success">{{ __('Admin') }}</span>
-            </a>
-            <button type="button" class="navbar-toggler d-md-none" data-admin-menu-toggle aria-expanded="false" aria-controls="admin-sidebar" aria-label="{{ __('Toggle admin navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex flex-wrap align-items-center gap-3 small">
-                <span class="text-white-50">{{ auth()->user()->name }}</span>
-                <a class="btn btn-outline-light btn-sm" href="{{ route('admin.profile.edit') }}">{{ __('My account') }}</a>
+<body class="admin-app">
+    <header class="admin-topbar">
+        <div class="container-fluid admin-topbar__inner">
+            <div class="d-flex align-items-center gap-3">
+                <button type="button" class="admin-menu-toggle btn d-md-none" data-admin-menu-toggle aria-expanded="false" aria-controls="admin-sidebar" aria-label="{{ __('Toggle admin navigation') }}">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <a href="{{ route('admin.dashboard') }}" class="admin-brand">
+                    <span class="admin-brand__mark" aria-hidden="true">PS</span>
+                    <span class="admin-brand__name">PowerStat <span>BD</span></span>
+                    <span class="admin-brand__badge">{{ __('Admin') }}</span>
+                </a>
+            </div>
+
+            <div class="admin-topbar__actions">
+                <span class="admin-user-name">{{ auth()->user()->name }}</span>
+                <a class="btn admin-topbar__button" href="{{ route('admin.profile.edit') }}">{{ __('My account') }}</a>
                 <form method="POST" action="{{ route('language.update') }}">
                     @csrf
                     <input type="hidden" name="locale" value="{{ app()->getLocale() === 'bn' ? 'en' : 'bn' }}">
-                    <button class="btn btn-outline-light btn-sm" type="submit" aria-label="{{ __('Switch language') }}">{{ app()->getLocale() === 'bn' ? 'English' : 'বাংলা' }}</button>
+                    <button class="btn admin-topbar__button" type="submit" aria-label="{{ __('Switch language') }}">{{ app()->getLocale() === 'bn' ? 'English' : 'বাংলা' }}</button>
                 </form>
                 <form method="POST" action="{{ route('admin.logout') }}">
                     @csrf
-                    <button class="btn btn-outline-light btn-sm" type="submit">{{ __('Sign out') }}</button>
+                    <button class="btn admin-topbar__signout" type="submit">{{ __('Sign out') }}</button>
                 </form>
             </div>
         </div>
     </header>
 
-    <div class="container-fluid">
-        <div class="row min-vh-100">
-            <aside id="admin-sidebar" class="col-12 col-md-3 col-xl-2 border-end bg-white p-3 d-none d-md-block">
-                <nav aria-label="{{ __('Admin navigation') }}" class="nav nav-pills flex-column gap-1">
-                    <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : 'text-dark' }}" href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.zones.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.zones.index') }}">{{ __('Areas') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.schedules.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.schedules.index') }}">{{ __('Load-shedding schedules') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.outages.index', 'admin.outages.create', 'admin.outages.show', 'admin.outages.edit') ? 'active' : 'text-dark' }}" href="{{ route('admin.outages.index') }}">{{ __('Outage Management') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.reasons.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.reasons.index') }}">{{ __('Outage Reasons') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.announcements.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.announcements.index') }}">{{ __('Announcements') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.outages.history') ? 'active' : 'text-dark' }}" href="{{ route('admin.outages.history') }}">{{ __('Outage History') }}</a>
-                    <a class="nav-link {{ request()->routeIs('admin.profile.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.profile.edit') }}">{{ __('Admin Account') }}</a>
-                </nav>
-            </aside>
-            <main class="col-12 col-md-9 col-xl-10 p-3 p-lg-4">
-        @if (session('success'))
-            <div class="alert alert-success" role="status">{{ session('success') }}</div>
-        @endif
-        @if ($errors->any())
-            <div class="alert alert-danger" role="alert">
-                <p class="fw-bold">{{ __('Please review the following:') }}</p>
-                <ul class="mb-0">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+    <div class="admin-layout">
+        <aside id="admin-sidebar" class="admin-sidebar d-none d-md-block">
+            <nav aria-label="{{ __('Admin navigation') }}" class="admin-sidebar__nav">
+                <a class="admin-nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" @if (request()->routeIs('admin.dashboard')) aria-current="page" @endif href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.zones.*') ? 'active' : '' }}" @if (request()->routeIs('admin.zones.*')) aria-current="page" @endif href="{{ route('admin.zones.index') }}">{{ __('Areas') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.schedules.*') ? 'active' : '' }}" @if (request()->routeIs('admin.schedules.*')) aria-current="page" @endif href="{{ route('admin.schedules.index') }}">{{ __('Load-shedding schedules') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.outages.index', 'admin.outages.create', 'admin.outages.show', 'admin.outages.edit') ? 'active' : '' }}" @if (request()->routeIs('admin.outages.index', 'admin.outages.create', 'admin.outages.show', 'admin.outages.edit')) aria-current="page" @endif href="{{ route('admin.outages.index') }}">{{ __('Outage Management') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.reasons.*') ? 'active' : '' }}" @if (request()->routeIs('admin.reasons.*')) aria-current="page" @endif href="{{ route('admin.reasons.index') }}">{{ __('Outage Reasons') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.announcements.*') ? 'active' : '' }}" @if (request()->routeIs('admin.announcements.*')) aria-current="page" @endif href="{{ route('admin.announcements.index') }}">{{ __('Announcements') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.outages.history') ? 'active' : '' }}" @if (request()->routeIs('admin.outages.history')) aria-current="page" @endif href="{{ route('admin.outages.history') }}">{{ __('Outage History') }}</a>
+                <a class="admin-nav-link {{ request()->routeIs('admin.profile.*') ? 'active' : '' }}" @if (request()->routeIs('admin.profile.*')) aria-current="page" @endif href="{{ route('admin.profile.edit') }}">{{ __('Admin Account') }}</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-main__content">
+                @if (session('success'))
+                    <div class="alert alert-success admin-alert" role="status">{{ session('success') }}</div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger admin-alert" role="alert">
+                        <p class="fw-bold">{{ __('Please review the following:') }}</p>
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @yield('content')
+                <footer class="admin-footer">PowerStat BD · {{ __('Admin') }}</footer>
             </div>
-        @endif
-        @yield('content')
-            </main>
-        </div>
+        </main>
     </div>
     <dialog data-confirmation-dialog class="m-auto w-[calc(100%-2rem)] max-w-md rounded-2xl border-0 p-0 shadow-2xl backdrop:bg-slate-950/50">
         <div class="p-6">

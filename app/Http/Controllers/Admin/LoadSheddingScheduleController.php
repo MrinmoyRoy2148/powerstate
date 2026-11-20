@@ -89,7 +89,7 @@ class LoadSheddingScheduleController extends Controller
 
     public function publish(LoadSheddingSchedule $schedule): RedirectResponse
     {
-        if ($schedule->scheduled_date->isPast()) {
+        if ($schedule->scheduled_date->lessThan(today())) {
             return back()->withErrors(['scheduled_date' => __('A past schedule cannot be published.')]);
         }
 

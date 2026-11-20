@@ -87,6 +87,25 @@ class PublicInformationTest extends TestCase
         );
     }
 
+    public function test_cancelled_outage_history_items_can_be_opened(): void
+    {
+        $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
+        $outage = $zone->outages()->create([
+            'title' => 'Cancelled interruption',
+            'outage_type' => 'planned',
+            'started_at' => '2026-10-12 08:00:00',
+            'status' => 'cancelled',
+        ]);
+
+        $this->get(route('outages.history'))
+            ->assertOk()
+            ->assertSee(route('outages.show', $outage));
+
+        $this->get(route('outages.show', $outage))
+            ->assertOk()
+            ->assertSee($outage->title);
+    }
+
     public function test_public_announcement_detail_hides_draft_records(): void
     {
         $draft = Announcement::create([
