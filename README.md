@@ -9,10 +9,11 @@ PowerStat BD is a Bangladesh-focused web application for sharing area-based elec
 - Bangla-first public interface with an English language switch.
 - Public pages for service areas, active outages, outage history, schedules, and announcements.
 - Self-service user registration, login, logout, and password reset.
+- Signed-in users can save service areas for quick access.
 - Protected administration area for managing service areas, outage reasons, schedules, outages, and announcements.
 - Admin access controls, active/inactive accounts, and rate-limited login attempts.
 - Dhaka timezone defaults for local date and time display.
-- Responsive Blade interface styled with Tailwind CSS.
+- Blade interface styled with Tailwind CSS on public pages and Bootstrap on admin pages.
 
 ## Technology
 

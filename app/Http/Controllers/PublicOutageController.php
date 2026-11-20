@@ -58,7 +58,7 @@ class PublicOutageController extends Controller
     public function show(Outage $outage): View
     {
         abort_unless(
-            in_array($outage->status, ['active', 'restored'], true)
+            in_array($outage->status, ['active', 'restored', 'cancelled'], true)
                 && $outage->zone()->where('is_active', true)->exists(),
             404
         );
