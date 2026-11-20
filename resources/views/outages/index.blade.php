@@ -4,6 +4,10 @@
 
 @section('content')
     <x-admin-page-header :title="__('Current outages')" :description="__('Active interruptions recorded by authorized staff. Restoration times are estimates.')" />
+    <nav class="mb-5 flex gap-2" aria-label="{{ __('Outage views') }}">
+        <a href="{{ route('outages.index') }}" aria-current="page" class="rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white">{{ __('Current') }}</a>
+        <a href="{{ route('outages.history') }}" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700">{{ __('History') }}</a>
+    </nav>
     <form method="GET" action="{{ route('outages.index') }}" class="mb-6 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row sm:items-end">
         <div class="flex-1">
             <label for="zone" class="mb-1 block text-sm font-semibold text-slate-700">{{ __('Filter by area') }}</label>
@@ -27,7 +31,14 @@
                 <p class="mt-3 text-xs text-slate-500">{{ __('Last updated') }} {{ $outage->updated_at->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') }} · {{ __('View details') }} →</p>
             </a>
         @empty
-            <p class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-sm text-slate-600 md:col-span-2">{{ __('No active outages are currently recorded for this area.') }}</p>
+            <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-sm text-slate-600 md:col-span-2">
+                <p class="font-bold">{{ __('No active outages are currently recorded for this area.') }}</p>
+                <p class="mt-2">{{ __('Clear the area filter or review outage history.') }}</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="{{ route('outages.index') }}" class="rounded-xl border border-slate-300 px-4 py-2 font-bold text-slate-700">{{ __('Clear filter') }}</a>
+                    <a href="{{ route('outages.history') }}" class="rounded-xl bg-slate-900 px-4 py-2 font-bold text-white">{{ __('View history') }}</a>
+                </div>
+            </div>
         @endforelse
     </div>
     <div class="mt-6">{{ $outages->links() }}</div>

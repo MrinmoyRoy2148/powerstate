@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
             OutageReasonSeeder::class,
             AdminUserSeeder::class,
         ]);
+
+        if (app()->environment(['local', 'demo'])) {
+            $this->call(DemoDataSeeder::class);
+        }
     }
 }

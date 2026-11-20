@@ -18,7 +18,11 @@
                 <span class="mt-5 inline-flex text-sm font-bold text-emerald-700">{{ __('View area') }} <span class="ml-2" aria-hidden="true">→</span></span>
             </a>
         @empty
-            <p class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-slate-600 sm:col-span-2 lg:col-span-3">{{ __('No active areas match your search.') }}</p>
+            <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-slate-600 sm:col-span-2 lg:col-span-3">
+                <p class="font-bold">{{ __('No active areas match your search.') }}</p>
+                <p class="mt-2 text-sm">{{ __('Clear the search or browse all active areas.') }}</p>
+                <a href="{{ route('zones.index') }}" class="mt-4 inline-flex rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700">{{ __('Clear search') }}</a>
+            </div>
         @endforelse
     </div>
     <div class="mt-6">{{ $zones->links() }}</div>

@@ -22,10 +22,16 @@
             <a href="{{ route('admin.zones.index') }}" class="px-2 py-2.5 text-sm font-semibold text-slate-600">{{ __('Clear') }}</a>
         @endif
     </form>
+    <p class="mb-2 text-sm text-slate-500">{{ __('Showing :first–:last of :total', ['first' => $zones->firstItem() ?? 0, 'last' => $zones->lastItem() ?? 0, 'total' => $zones->total()]) }}</p>
     <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div class="overflow-x-auto">
             <table class="w-full min-w-[720px] text-left text-sm">
-                <thead class="bg-slate-50 text-xs text-slate-500"><tr><th class="px-5 py-3">{{ __('Area') }}</th><th class="px-5 py-3">{{ __('Parent') }}</th><th class="px-5 py-3">{{ __('Schedules') }}</th><th class="px-5 py-3">{{ __('Outages') }}</th><th class="px-5 py-3">{{ __('labels.status') }}</th><th class="px-5 py-3">{{ __('Actions') }}</th></tr></thead>
+                <thead class="bg-slate-50 text-xs text-slate-500"><tr>
+                    <th class="px-5 py-3"><a href="{{ route('admin.zones.index', array_merge(request()->except(['page', 'direction']), ['sort' => 'name', 'direction' => request('direction') === 'asc' ? 'desc' : 'asc'])) }}">{{ __('Area') }}</a></th>
+                    <th class="px-5 py-3">{{ __('Parent') }}</th><th class="px-5 py-3">{{ __('Schedules') }}</th><th class="px-5 py-3">{{ __('Outages') }}</th>
+                    <th class="px-5 py-3"><a href="{{ route('admin.zones.index', array_merge(request()->except(['page', 'direction']), ['sort' => 'status', 'direction' => request('direction') === 'asc' ? 'desc' : 'asc'])) }}">{{ __('labels.status') }}</a></th>
+                    <th class="px-5 py-3">{{ __('Actions') }}</th>
+                </tr></thead>
                 <tbody class="divide-y divide-slate-100">
                     @forelse ($zones as $zone)
                         <tr>
@@ -34,7 +40,7 @@
                             <td class="px-5 py-4">{{ $zone->schedules_count }}</td><td class="px-5 py-4">{{ $zone->outages_count }}</td>
                             <td class="px-5 py-4"><x-status-badge :value="$zone->is_active ? 'active' : 'inactive'" /></td>
                             <td class="px-5 py-4"><div class="flex items-center gap-3"><a class="font-bold text-emerald-700 hover:underline" href="{{ route('admin.zones.edit', $zone) }}">{{ __('Edit') }}</a>
-                                <form method="POST" action="{{ route('admin.zones.destroy', $zone) }}" onsubmit="return confirm(@js(__('Delete this area? Areas in use cannot be deleted.')))">@csrf @method('DELETE')<button class="font-bold text-rose-700 hover:underline" type="submit">{{ __('Delete') }}</button></form></div></td>
+                                <form method="POST" action="{{ route('admin.zones.destroy', $zone) }}">@csrf @method('DELETE')<button class="font-bold text-rose-700 hover:underline" type="submit" data-confirm="{{ __('Delete this area? Areas in use cannot be deleted.') }}" data-confirm-label="{{ __('Delete') }}">{{ __('Delete') }}</button></form></div></td>
                         </tr>
                     @empty
                         <tr><td colspan="6" class="px-5 py-10 text-center text-slate-500">{{ __('No service areas match this filter.') }}</td></tr>

@@ -8,6 +8,19 @@
         <p class="text-xs font-bold text-emerald-300">{{ $zone->parent?->name ?? __('Service area') }}</p>
         <h1 class="mt-2 text-3xl font-black sm:text-4xl">{{ $zone->name }}</h1>
         @if ($zone->description)<p class="mt-3 max-w-2xl leading-7 text-slate-300">{{ $zone->description }}</p>@endif
+        @auth
+            @if (auth()->user()->savedZones()->whereKey($zone->id)->exists())
+                <form method="POST" action="{{ route('zones.unsave', $zone) }}" class="mt-5">
+                    @csrf @method('DELETE')
+                    <button type="submit" class="rounded-xl border border-white/30 px-4 py-2 text-sm font-bold">{{ __('Remove saved area') }}</button>
+                </form>
+            @else
+                <form method="POST" action="{{ route('zones.save', $zone) }}" class="mt-5">
+                    @csrf @method('PUT')
+                    <button type="submit" class="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-bold text-slate-950">{{ __('Save area') }}</button>
+                </form>
+            @endif
+        @endauth
     </section>
 
     <div class="mt-8 grid gap-8 lg:grid-cols-2">

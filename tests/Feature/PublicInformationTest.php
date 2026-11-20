@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-use App\Http\Controllers\PublicAnnouncementController;
 use App\Http\Controllers\PublicOutageController;
 use App\Http\Controllers\PublicScheduleController;
 use App\Models\Announcement;
@@ -41,6 +40,13 @@ class PublicInformationTest extends TestCase
             'end_time' => '13:00',
             'status' => 'published',
         ]);
+        $zone->schedules()->create([
+            'title' => 'Cancelled schedule',
+            'scheduled_date' => '2030-01-01',
+            'start_time' => '14:00',
+            'end_time' => '15:00',
+            'status' => 'cancelled',
+        ]);
 
         $view = app(PublicScheduleController::class)->index(Request::create('/schedules'));
 
@@ -65,6 +71,12 @@ class PublicInformationTest extends TestCase
             'started_at' => '2026-10-11 08:00:00',
             'restored_at' => '2026-10-11 09:00:00',
             'status' => 'restored',
+        ]);
+        $zone->outages()->create([
+            'title' => 'Cancelled interruption',
+            'outage_type' => 'planned',
+            'started_at' => '2026-10-12 07:00:00',
+            'status' => 'cancelled',
         ]);
 
         $view = app(PublicOutageController::class)->index(Request::create('/outages'));

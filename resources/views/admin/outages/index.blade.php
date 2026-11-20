@@ -13,6 +13,7 @@
             </div>
         </div>
     </form>
+    <p class="small text-secondary mb-2">{{ __('Showing :first–:last of :total', ['first' => $outages->firstItem() ?? 0, 'last' => $outages->lastItem() ?? 0, 'total' => $outages->total()]) }}</p>
     <div class="card">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">

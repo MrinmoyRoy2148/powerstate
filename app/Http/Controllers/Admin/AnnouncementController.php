@@ -88,6 +88,9 @@ class AnnouncementController extends Controller
     public function update(Request $request, Announcement $announcement): RedirectResponse
     {
         $validated = $this->validatedData($request);
+        if (($validated['status'] ?? null) !== $announcement->status) {
+            return back()->withErrors(['status' => __('Use the publish or unpublish action to change notice status.')]);
+        }
         $validated['published_at'] = $validated['status'] === 'published'
             ? ($validated['published_at'] ?? $announcement->published_at ?? now())
             : null;
@@ -102,6 +105,11 @@ class AnnouncementController extends Controller
     {
         if ($announcement->expires_at?->isPast()) {
             return back()->withErrors(['expires_at' => __('The expiry date must be in the future to publish this announcement.')]);
+        }
+
+        if ($announcement->published_at && $announcement->expires_at
+            && $announcement->expires_at->lessThanOrEqualTo($announcement->published_at)) {
+            return back()->withErrors(['expires_at' => __('Expiry must be after the publication date.')]);
         }
 
         $announcement->update([

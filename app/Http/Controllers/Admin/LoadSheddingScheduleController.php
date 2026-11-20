@@ -76,13 +76,23 @@ class LoadSheddingScheduleController extends Controller
 
     public function update(Request $request, LoadSheddingSchedule $schedule): RedirectResponse
     {
-        $schedule->update($this->validatedData($request));
+        $validated = $this->validatedData($request);
+
+        if (($validated['status'] ?? null) !== $schedule->status) {
+            return back()->withErrors(['status' => __('Use the publish or cancel action to change schedule status.')]);
+        }
+
+        $schedule->update($validated);
 
         return redirect()->route('admin.schedules.index')->with('success', __('Schedule updated successfully.'));
     }
 
     public function publish(LoadSheddingSchedule $schedule): RedirectResponse
     {
+        if ($schedule->scheduled_date->isPast()) {
+            return back()->withErrors(['scheduled_date' => __('A past schedule cannot be published.')]);
+        }
+
         $schedule->update(['status' => 'published']);
 
         return redirect()->route('admin.schedules.index')->with('success', __('Schedule published successfully.'));
@@ -107,10 +117,16 @@ class LoadSheddingScheduleController extends Controller
      */
     private function validatedData(Request $request): array
     {
+        $status = $request->input('status');
+
         return $request->validate([
             'zone_id' => ['required', 'integer', Rule::exists('zones', 'id')->where('is_active', true)],
             'title' => ['required', 'string', 'max:180'],
-            'scheduled_date' => ['required', 'date_format:Y-m-d'],
+            'scheduled_date' => [
+                'required',
+                'date_format:Y-m-d',
+                Rule::when($status === 'published', ['after_or_equal:today']),
+            ],
             'start_time' => ['required', 'date_format:H:i'],
             'end_time' => ['required', 'date_format:H:i', 'after:start_time'],
             'notes' => ['nullable', 'string'],

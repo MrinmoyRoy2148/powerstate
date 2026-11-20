@@ -4,6 +4,10 @@
 
 @section('content')
     <x-admin-page-header :title="__('Outage history')" :description="__('Previous outages remain available for reference after service is restored.')" />
+    <nav class="mb-5 flex gap-2" aria-label="{{ __('Outage views') }}">
+        <a href="{{ route('outages.index') }}" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700">{{ __('Current') }}</a>
+        <a href="{{ route('outages.history') }}" aria-current="page" class="rounded-xl bg-slate-950 px-4 py-2 text-sm font-bold text-white">{{ __('History') }}</a>
+    </nav>
     <form method="GET" action="{{ route('outages.history') }}" class="mb-6 grid gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
             <label for="zone" class="mb-1 block text-sm font-semibold text-slate-700">{{ __('Area') }}</label>
@@ -37,7 +41,14 @@
                     <div class="text-sm text-slate-500"><p>{{ __('Started') }} {{ $outage->started_at->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') }}</p><p>{{ __('Restored') }} {{ $outage->restored_at?->locale(app()->getLocale())->translatedFormat('d M Y, h:i A') ?? __('Not recorded') }}</p></div>
                 </a>
             @empty
-                <p class="p-8 text-sm text-slate-600">{{ __('No historical outages match those filters.') }}</p>
+                <div class="p-8 text-sm text-slate-600">
+                    <p class="font-bold">{{ __('No historical outages match those filters.') }}</p>
+                    <p class="mt-2">{{ __('Clear the filters or view current outages.') }}</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="{{ route('outages.history') }}" class="rounded-xl border border-slate-300 px-4 py-2 font-bold text-slate-700">{{ __('Clear filters') }}</a>
+                        <a href="{{ route('outages.index') }}" class="rounded-xl bg-slate-900 px-4 py-2 font-bold text-white">{{ __('View current outages') }}</a>
+                    </div>
+                </div>
             @endforelse
         </div>
     </div>

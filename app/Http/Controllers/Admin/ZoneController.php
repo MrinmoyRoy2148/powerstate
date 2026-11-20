@@ -16,7 +16,11 @@ class ZoneController extends Controller
         $validated = $request->validate([
             'search' => ['nullable', 'string', 'max:120'],
             'status' => ['nullable', Rule::in(['active', 'inactive'])],
+            'sort' => ['nullable', Rule::in(['name', 'status'])],
+            'direction' => ['nullable', Rule::in(['asc', 'desc'])],
         ]);
+        $sort = $validated['sort'] ?? 'name';
+        $direction = $validated['direction'] ?? 'asc';
 
         $zones = Zone::query()
             ->with('parent')
@@ -31,7 +35,8 @@ class ZoneController extends Controller
                 $validated['status'] ?? null,
                 fn ($query, string $status) => $query->where('is_active', $status === 'active')
             )
-            ->orderBy('name')
+            ->when($sort === 'status', fn ($query) => $query->orderBy('is_active', $direction))
+            ->when($sort === 'name', fn ($query) => $query->orderBy('name', $direction))
             ->paginate(20)
             ->withQueryString();
 

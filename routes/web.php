@@ -60,6 +60,12 @@ Route::post('/logout', [UserAuthController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
 
+Route::middleware('auth')->group(function (): void {
+    Route::get('/my-areas', [PublicZoneController::class, 'saved'])->name('zones.saved');
+    Route::put('/zones/{zone:slug}/saved', [PublicZoneController::class, 'save'])->name('zones.save');
+    Route::delete('/zones/{zone:slug}/saved', [PublicZoneController::class, 'unsave'])->name('zones.unsave');
+});
+
 Route::prefix('admin')->name('admin.')->group(function (): void {
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AdminAuthController::class, 'login'])
@@ -84,6 +90,8 @@ Route::prefix('admin')->name('admin.')->group(function (): void {
             ->name('schedules.cancel');
         Route::patch('/outages/{outage}/restore', [AdminOutageController::class, 'restore'])
             ->name('outages.restore');
+        Route::patch('/outages/{outage}/cancel', [AdminOutageController::class, 'cancel'])
+            ->name('outages.cancel');
         Route::get('/outages/history', [AdminOutageController::class, 'history'])
             ->name('outages.history');
         Route::resource('outages', AdminOutageController::class)->except('destroy');
