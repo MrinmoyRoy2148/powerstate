@@ -18,7 +18,8 @@ class UserAuthenticationTest extends TestCase
     {
         $this->get(route('register'))
             ->assertOk()
-            ->assertSee(__('Create an account'));
+            ->assertSee(__('Create an account'))
+            ->assertSee(__('Public accounts do not include administrator access.'));
 
         $this->get(route('login'))
             ->assertOk()

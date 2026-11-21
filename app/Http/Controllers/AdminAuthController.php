@@ -7,7 +7,9 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Password;
 use Illuminate\View\View;
 
 class AdminAuthController extends Controller
@@ -22,7 +24,62 @@ class AdminAuthController extends Controller
             return redirect()->route('home');
         }
 
-        return view('auth.admin-login');
+        return view('auth.admin-login', [
+            'registrationEnabled' => $this->hasRegistrationKey(),
+        ]);
+    }
+
+    public function showRegistrationForm(): View
+    {
+        abort_unless($this->hasRegistrationKey(), 404);
+
+        return view('auth.admin-register');
+    }
+
+    public function register(Request $request): RedirectResponse
+    {
+        $registrationKey = config('admin.registration_key');
+        abort_unless(is_string($registrationKey) && strlen($registrationKey) >= 32, 404);
+
+        $email = $request->input('email');
+
+        if (is_string($email)) {
+            $request->merge(['email' => Str::lower(trim($email))]);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'string', 'confirmed', Password::min(12)],
+            'registration_key' => ['required', 'string', 'max:255'],
+        ]);
+
+        if ($validator->fails()) {
+            return back()
+                ->withInput($request->except(['password', 'password_confirmation', 'registration_key']))
+                ->withErrors($validator);
+        }
+
+        $validated = $validator->validated();
+
+        if (! hash_equals($registrationKey, $validated['registration_key'])) {
+            return back()
+                ->withInput($request->except(['password', 'password_confirmation', 'registration_key']))
+                ->withErrors(['registration_key' => __('The administrator registration key is invalid.')]);
+        }
+
+        $admin = new User;
+        $admin->name = $validated['name'];
+        $admin->email = $validated['email'];
+        $admin->password = $validated['password'];
+        $admin->role = 'admin';
+        $admin->is_active = true;
+        $admin->save();
+
+        Auth::login($admin);
+        $request->session()->regenerate();
+
+        return redirect()->route('admin.dashboard');
     }
 
     public function login(Request $request): RedirectResponse
@@ -58,5 +115,12 @@ class AdminAuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('admin.login');
+    }
+
+    private function hasRegistrationKey(): bool
+    {
+        $registrationKey = config('admin.registration_key');
+
+        return is_string($registrationKey) && strlen($registrationKey) >= 32;
     }
 }

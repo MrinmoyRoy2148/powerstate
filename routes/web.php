@@ -72,6 +72,13 @@ Route::prefix('admin')->name('admin.')->group(function (): void {
         ->middleware('throttle:admin-login')
         ->name('login.store');
 
+    Route::middleware('guest')->group(function (): void {
+        Route::get('/register', [AdminAuthController::class, 'showRegistrationForm'])->name('register');
+        Route::post('/register', [AdminAuthController::class, 'register'])
+            ->middleware('throttle:admin-registration')
+            ->name('register.store');
+    });
+
     Route::middleware(['auth', 'admin'])->group(function (): void {
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');

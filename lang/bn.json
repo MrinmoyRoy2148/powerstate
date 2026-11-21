@@ -319,5 +319,21 @@
     "You are receiving this email because we received a password reset request for your account.": "আপনার অ্যাকাউন্টের জন্য পাসওয়ার্ড রিসেটের অনুরোধ পাওয়ায় এই ইমেইল পাঠানো হয়েছে।",
     "Reset Password": "পাসওয়ার্ড রিসেট করুন",
     "This password reset link will expire in :count minutes.": ":count মিনিট পর এই পাসওয়ার্ড রিসেট লিংকের মেয়াদ শেষ হবে।",
-    "If you did not request a password reset, no further action is required.": "আপনি পাসওয়ার্ড রিসেটের অনুরোধ না করে থাকলে আর কিছু করার দরকার নেই।"
+    "If you did not request a password reset, no further action is required.": "আপনি পাসওয়ার্ড রিসেটের অনুরোধ না করে থাকলে আর কিছু করার দরকার নেই।",
+    "Area-wise power updates": "এলাকাভিত্তিক বিদ্যুৎ-তথ্য",
+    "Know what is happening in your area.": "আপনার এলাকায় কী হচ্ছে, জেনে নিন।",
+    "Browse published schedules, outage updates, and notices for service areas across Bangladesh.": "বাংলাদেশের বিভিন্ন এলাকার প্রকাশিত সময়সূচি, বিভ্রাটের খবর ও নোটিশ দেখুন।",
+    "Account access": "অ্যাকাউন্টে প্রবেশ",
+    "Create a public account to save the areas you follow.": "আপনার পছন্দের এলাকা সংরক্ষণ করতে সাধারণ অ্যাকাউন্ট তৈরি করুন।",
+    "Sign in to view the areas you have saved.": "সংরক্ষিত এলাকাগুলো দেখতে লগ ইন করুন।",
+    "Public accounts do not include administrator access.": "সাধারণ অ্যাকাউন্টে অ্যাডমিন সুবিধা থাকে না।",
+    "Administrator?": "আপনি কি অ্যাডমিন?",
+    "Register an administrator": "অ্যাডমিন অ্যাকাউন্ট তৈরি করুন",
+    "Need to create or recover an administrator account?": "অ্যাডমিন অ্যাকাউন্ট তৈরি বা পুনরুদ্ধার করতে চান?",
+    "This protected form creates an administrator account. Keep the registration key private.": "এই সুরক্ষিত ফর্মে অ্যাডমিন অ্যাকাউন্ট তৈরি হয়। রেজিস্ট্রেশন কী গোপন রাখুন।",
+    "Administrator registration key": "অ্যাডমিন রেজিস্ট্রেশন কী",
+    "The key is configured in the hosting environment and is never saved with form data.": "হোস্টিং সেটিংসে এই কী রাখা হয়; ফর্মের তথ্যের সঙ্গে এটি সংরক্ষিত হয় না।",
+    "Create administrator account": "অ্যাডমিন অ্যাকাউন্ট তৈরি করুন",
+    "Back to admin sign in": "অ্যাডমিন লগ ইনে ফিরুন",
+    "The administrator registration key is invalid.": "অ্যাডমিন রেজিস্ট্রেশন কীটি সঠিক নয়।"
 }

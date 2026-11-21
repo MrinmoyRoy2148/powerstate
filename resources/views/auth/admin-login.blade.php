@@ -41,6 +41,13 @@
                 </div>
                 <button class="mt-1 rounded-xl bg-emerald-600 px-5 py-3 font-bold text-white transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" type="submit">{{ __('Sign in securely') }}</button>
             </form>
+
+            @if ($registrationEnabled)
+                <p class="mt-6 border-t border-slate-200 pt-5 text-center text-sm text-slate-600">
+                    {{ __('Need to create or recover an administrator account?') }}
+                    <a class="font-bold text-emerald-700 hover:text-emerald-800" href="{{ route('admin.register') }}">{{ __('Register an administrator') }}</a>
+                </p>
+            @endif
         </section>
         <a href="{{ route('home') }}" class="mt-5 block text-center text-sm font-semibold text-slate-300 hover:text-white">{{ __('← Return to public site') }}</a>
     </main>

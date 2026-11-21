@@ -104,6 +104,8 @@ php artisan db:seed --class=AdminUserSeeder
 
 Sign in at [http://127.0.0.1:8000/admin/login](http://127.0.0.1:8000/admin/login) with the configured administrator email and password. Do not commit `.env` or share its contents.
 
+For deployments where the application shell is unavailable, set `ADMIN_REGISTRATION_KEY` to a randomly generated secret of at least 32 characters in the hosting provider's environment settings, then redeploy. Open `/admin/register` and enter that key to create a new administrator account. The same flow can create a replacement admin if the original credentials are lost. Keep the key private and remove it from the hosting environment after registration when you do not need recovery access.
+
 ## Tests
 
 Run the test suite with:
