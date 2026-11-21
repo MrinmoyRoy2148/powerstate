@@ -67,8 +67,9 @@ class AdminAccountManagementTest extends TestCase
             ->assertRedirectToRoute('admin.login');
     }
 
-    public function test_database_seeder_creates_configured_admin_without_a_default_demo_account(): void
+    public function test_local_database_seeding_creates_configured_admin_and_districts_without_sample_records(): void
     {
+        $this->app['env'] = 'local';
         config([
             'admin.initial_admin.name' => 'PowerStat Admin',
             'admin.initial_admin.email' => 'configured-admin@example.com',
@@ -82,5 +83,9 @@ class AdminAccountManagementTest extends TestCase
         $this->assertTrue($admin->is_active);
         $this->assertTrue(Hash::check('Configured-strong-password', $admin->password));
         $this->assertDatabaseMissing('users', ['email' => 'test@example.com']);
+        $this->assertDatabaseCount('zones', 64);
+        $this->assertDatabaseCount('announcements', 0);
+        $this->assertDatabaseCount('load_shedding_schedules', 0);
+        $this->assertDatabaseCount('outages', 0);
     }
 }

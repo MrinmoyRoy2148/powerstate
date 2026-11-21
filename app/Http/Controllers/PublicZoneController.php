@@ -36,8 +36,8 @@ class PublicZoneController extends Controller
         $zone->load([
             'parent',
             'outages' => fn ($query) => $query->with('reason')->where('status', 'active')->latest('started_at'),
-            'schedules' => fn ($query) => $query->where('status', 'published')
-                ->whereDate('scheduled_date', '>=', today())
+            'schedules' => fn ($query) => $query->upcoming()
+                ->where('status', 'published')
                 ->orderBy('scheduled_date')
                 ->orderBy('start_time'),
             'announcements' => fn ($query) => $query->with('zone')

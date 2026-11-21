@@ -3,7 +3,7 @@
 @section('title', __('Browse areas'))
 
 @section('content')
-    <x-admin-page-header :title="__('Find your area')" :description="__('Browse active service areas to check their schedules and outage updates.')" />
+    <x-admin-page-header :title="__('Find your area')" :description="__('Browse district-level records. Electricity utility coverage and local service boundaries are not yet verified.')" />
     <form method="GET" action="{{ route('zones.index') }}" class="mb-6 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row">
         <label for="search" class="sr-only">{{ __('Search area name') }}</label>
         <input id="search" name="search" value="{{ request('search') }}" maxlength="120" type="search" placeholder="{{ __('Search areas by name') }}" class="min-w-0 flex-1 rounded-xl border border-slate-300 px-4 py-3 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-100">

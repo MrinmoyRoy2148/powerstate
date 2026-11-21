@@ -19,7 +19,7 @@ class PublicScheduleController extends Controller
         $schedules = LoadSheddingSchedule::query()
             ->with('zone')
             ->where('status', 'published')
-            ->whereDate('scheduled_date', '>=', today())
+            ->upcoming()
             ->whereHas('zone', fn ($query) => $query->where('is_active', true))
             ->when($validated['zone'] ?? null, fn ($query, int $zoneId) => $query->where('zone_id', $zoneId))
             ->when($validated['date'] ?? null, fn ($query, string $date) => $query->whereDate('scheduled_date', $date))

@@ -171,4 +171,35 @@ class PublicInformationTest extends TestCase
             $this->get($url)->assertOk();
         }
     }
+
+    public function test_public_schedule_pages_hide_today_periods_after_their_end_time(): void
+    {
+        $this->travelTo(now()->setDate(2026, 11, 21)->setTime(14, 0));
+        $zone = Zone::create(['name' => 'Dhaka', 'slug' => 'dhaka']);
+
+        $zone->schedules()->create([
+            'title' => 'Ended schedule',
+            'scheduled_date' => today(),
+            'start_time' => '13:00',
+            'end_time' => '14:00',
+            'status' => 'published',
+        ]);
+        $zone->schedules()->create([
+            'title' => 'Ongoing schedule',
+            'scheduled_date' => today(),
+            'start_time' => '13:00',
+            'end_time' => '14:30',
+            'status' => 'published',
+        ]);
+
+        $this->get(route('schedules.index'))
+            ->assertOk()
+            ->assertDontSee('Ended schedule')
+            ->assertSee('Ongoing schedule');
+
+        $this->get(route('zones.show', $zone))
+            ->assertOk()
+            ->assertDontSee('Ended schedule')
+            ->assertSee('Ongoing schedule');
+    }
 }
