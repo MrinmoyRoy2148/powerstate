@@ -1,7 +1,7 @@
 FROM php:8.4-apache AS php-base
 
 RUN apt-get update && apt-get install -y \
-    git unzip libzip-dev libicu-dev libpq-dev \
+    git unzip pkg-config libzip-dev libicu-dev libpq-dev \
     && docker-php-ext-install pdo_mysql pdo_pgsql mbstring bcmath exif pcntl zip intl \
     && a2enmod rewrite headers \
     && sed -i 's/Listen 80/Listen 10000/' /etc/apache2/ports.conf \
